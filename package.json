@@ -1,0 +1,12 @@
+{
+  "name": "@kcctdensan/oonow",
+  "license": "LGPL-3.0",
+  "private": true,
+  "workspaces": [
+    "packages/mobile",
+    "packages/desktop",
+    "packages/front",
+    "packages/web",
+    "packages/back"
+  ]
+}
