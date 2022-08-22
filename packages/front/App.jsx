@@ -29,9 +29,9 @@ function App(){
     if (!values.username) {
       errors.username = "ユーザー名を入力してください";
     } else if (values.username.length < 5) {
-      errors.password = "5文字以上20文字以下のユーザー名を入力してください";
+      errors.username = "5文字以上20文字以下のユーザー名を入力してください";
     } else if (values.username.length > 20) {
-      errors.password = "5文字以上20文字以下のユーザー名を入力してください";
+      errors.username = "5文字以上20文字以下のユーザー名を入力してください";
     }
     if (!values.mailAddress) {
       errors.mailAddress = "メールアドレスを入力してください";
