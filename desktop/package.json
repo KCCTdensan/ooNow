@@ -1,5 +1,5 @@
 {
-  "name": "ooNow",
+  "name": "@kcctdensan/oonow-client-desktop",
   "version": "0.0.0",
   "dependencies": {
     "@tauri-apps/api": "^1.0.2",
