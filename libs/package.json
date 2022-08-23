@@ -2,7 +2,13 @@
   "name": "@kcctdensan/oonow-libs",
   "description": "ooNow frontend libraries",
   "version": "0.1.0",
-  "dependencies": {},
+  "dependencies": {
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.7.4"
+  },
   "devDependencies": {
     "@babel/core": "^7.18.13",
     "@storybook/addon-actions": "^6.5.10",
@@ -13,7 +19,8 @@
     "@storybook/manager-webpack5": "^6.5.10",
     "@storybook/react": "^6.5.10",
     "@storybook/testing-library": "^0.0.13",
-    "babel-loader": "^8.2.5"
+    "babel-loader": "^8.2.5",
+    "webpack": "^5.74.0"
   },
   "license": "LGPL-3.0",
   "scripts": {
