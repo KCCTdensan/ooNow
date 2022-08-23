@@ -3,11 +3,8 @@
   "description": "ooNow frontend libraries",
   "version": "0.1.0",
   "dependencies": {
-    "@types/react": "^18.0.17",
-    "@types/react-dom": "^18.0.6",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "typescript": "^4.7.4"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.18.13",
@@ -15,16 +12,27 @@
     "@storybook/addon-essentials": "^6.5.10",
     "@storybook/addon-interactions": "^6.5.10",
     "@storybook/addon-links": "^6.5.10",
-    "@storybook/builder-webpack5": "^6.5.10",
-    "@storybook/manager-webpack5": "^6.5.10",
+    "@storybook/builder-vite": "^0.2.2",
     "@storybook/react": "^6.5.10",
     "@storybook/testing-library": "^0.0.13",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^2.0.1",
     "babel-loader": "^8.2.5",
-    "webpack": "^5.74.0"
+    "typescript": "^4.7.4",
+    "vite": "^3.0.9"
   },
+  "files": [
+    "dist",
+    "types"
+  ],
   "license": "LGPL-3.0",
+  "main": "dist/main.js",
   "scripts": {
+    "build": "tsc && vite build",
     "build-storybook": "build-storybook",
     "storybook": "start-storybook -p 6006"
-  }
+  },
+  "type": "module",
+  "types": "types/main.d.ts"
 }

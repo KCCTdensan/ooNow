@@ -1,9 +1,10 @@
 node_modules/
+dist/
 
 # USE YARN
 
 package-lock.json
-pnpm-lock.yml
+pnpm-lock.yaml
 
 npm-debug.log*
 yarn-error.log*
