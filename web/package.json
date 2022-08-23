@@ -2,5 +2,21 @@
   "name": "@kcctdensan/oonow-client-web",
   "description": "ooNow web app",
   "version": "0.1.0",
-  "license": "LGPL-3.0"
+  "dependencies": {
+    "@kcctdensan/oonow-libs": "*",
+    "next": "^12.2.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.22.0",
+    "eslint-config-next": "^12.2.5"
+  },
+  "license": "LGPL-3.0",
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "lint": "next lint",
+    "start": "next start"
+  }
 }
