@@ -1,5 +1,9 @@
 node_modules/
+
+# USE YARN
+
 package-lock.json
+pnpm-lock.yml
 
 npm-debug.log*
 yarn-error.log*
