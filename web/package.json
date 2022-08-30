@@ -17,6 +17,8 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
+    "prebuild": "npm run build -w ../libs",
+    "predev": "npm run build -w ../libs",
     "start": "next start"
   }
 }
