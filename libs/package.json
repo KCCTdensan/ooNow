@@ -3,6 +3,7 @@
   "description": "ooNow frontend libraries",
   "version": "0.1.0",
   "dependencies": {
+    "@emotion/css": "^11.10.0",
     "@emotion/react": "^11.10.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -22,6 +23,7 @@
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.0.1",
     "babel-loader": "^8.2.5",
+    "storybook-dark-mode": "^1.1.0",
     "typescript": "^4.8.2",
     "vite": "^3.0.9",
     "vite-tsconfig-paths": "^3.5.0"

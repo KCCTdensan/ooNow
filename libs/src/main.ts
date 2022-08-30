@@ -1,3 +1,3 @@
 import "global.css"
 
-export { default as Button } from "components/atoms/Button"
+export { default as UIButton } from "components/atoms/UIButton"
