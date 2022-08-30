@@ -2,10 +2,10 @@ import { resolve } from "node:path"
 import { defineConfig } from "vite"
 import react from "@vitejs/plugin-react"
 import tsconfigPaths from "vite-tsconfig-paths"
-import pkg from "./package.json"
+import { dependencies } from "./package.json"
 
 // https://github.com/emotion-js/emotion/issues/2853
-const deps = Object.keys(pkg.dependencies)
+const deps = Object.keys(dependencies)
 const re = new RegExp(`^(${deps.join("|")})($|/)`)
 const external = name => re.test(name)
 

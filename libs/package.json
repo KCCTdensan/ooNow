@@ -28,7 +28,8 @@
     ".": {
       "import": "./dist/main.js",
       "types": "./types/main.d.ts"
-    }
+    },
+    "./": "./dist/"
   },
   "files": [
     "dist",
@@ -38,7 +39,6 @@
   "scripts": {
     "build": "tsc && vite build",
     "build-storybook": "build-storybook",
-    "dev": "vite",
     "storybook": "start-storybook -p 6006"
   },
   "type": "module"
