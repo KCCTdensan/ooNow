@@ -1,1 +1,1 @@
-export { default as Button } from "./stories/Button"
+export { default as Button } from "components/atoms/Button"
