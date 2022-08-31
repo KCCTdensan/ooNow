@@ -7,7 +7,7 @@ const Home: React.FC = () => {
     return (
         <>
         <Header />
-        <h1>ooなう</h1>
+        <p>ここにTLとか</p>
         <Footer />
         </>
     );
