@@ -9,12 +9,17 @@ import {
 
 type UIButtonProps = {
   text: string
-  handler: React.MouseEventHandler<HTMLButtonElement>
+  handler?: () => void
   dark?: boolean
   strong?: boolean
 }
 
-const UIButton: FC<UIButtonProps> = ({ text, handler, dark, strong }) => {
+const UIButton: FC<UIButtonProps> = ({
+  text,
+  handler,
+  dark = false,
+  strong = false,
+}) => {
   return (
     <button
       className={css`

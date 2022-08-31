@@ -1,22 +1,23 @@
+import { useDarkMode } from "storybook-dark-mode"
 import UIButton from "components/atoms/UIButton"
-import PassDark from "components/story/PassDark"
 
 export default {
   title: "Atoms/UIButton",
   component: UIButton,
-  args: {
-    handler: () => {},
-  }
 }
 
-export const Basic = () => (
-  <PassDark>
-    <UIButton text={"Basic"} />
-  </PassDark>
-)
-
-export const Strong = () => (
-  <PassDark>
-    <UIButton text={"Strong"} strong />
-  </PassDark>
-)
+export const Variants = () => {
+  const dark = useDarkMode()
+  return (
+    <section>
+      {[
+        <UIButton text={"Basic"} dark={dark} />,
+        <UIButton text={"Strong"} dark={dark} strong />,
+      ].map((e, i) => (
+        <div css={{
+          margin: "1rem 0",
+        }} key={i}>{e}</div>
+      ))}
+    </section>
+  )
+}
