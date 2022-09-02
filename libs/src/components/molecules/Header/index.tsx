@@ -1,9 +1,10 @@
 import { FC } from "react"
 
+//タイトルのアイコンでクリックするとページ遷移したい
 const Header: FC = () => {
   return (
     <header>
-      へっだーです
+      <h1>ooなう</h1>
     </header>
   )
 }
