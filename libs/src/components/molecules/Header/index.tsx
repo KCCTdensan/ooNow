@@ -5,6 +5,7 @@ const Header: FC = () => {
   return (
     <header>
       <h1>ooなう</h1>
+      
     </header>
   )
 }

@@ -1,5 +1,4 @@
 import Home from '.';
-import React from 'react';
 
 export default {
     title: 'Templates/Home',
