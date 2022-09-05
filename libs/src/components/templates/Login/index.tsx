@@ -1,7 +1,8 @@
 import {useState} from "react";
-import "./App.css";
+import "./Login.css";
+import React from "react";
 
-function App(){
+function Login(){
   const initialValues = {username: "", mailAddress: "", password: ""};
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
@@ -90,4 +91,4 @@ function App(){
   );
 }
 
-export default App;
+export default Login;
