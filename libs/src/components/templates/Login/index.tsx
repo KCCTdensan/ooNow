@@ -1,6 +1,8 @@
 import {useState} from "react";
 import React from "react";
 import { css } from "@emotion/css";
+import UIButton from "components/atoms/UIButton"
+
 
 function Login(){
   const initialValues = {username: "", mailAddress: "", password: ""};
@@ -85,7 +87,7 @@ function Login(){
               onChange={(e) => handleChange(e)}/>
           </div>
           <p className={styles.errorMsg}>{formErrors.password}</p>
-          <button className="submitButton">ログイン</button>
+          <UIButton text="ログイン" strong/>
           {Object.keys(formErrors).length === 0 && isSubmit && (
             <div className={styles.msgOk}>ログインに成功しました</div>
           )}

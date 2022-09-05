@@ -2,9 +2,9 @@ import { FC } from "react"
 import { css } from '@emotion/css'
 import UIButton from "../../atoms/UIButton";
 
-//将来的にはプロフィールページに遷移したい
+//将来的にはログインページに遷移したい
 const testHundler = () => {
-    alert("プロフィールへ遷移します");
+    alert("ログインフォームへ遷移します");
 }
 
 
@@ -35,7 +35,7 @@ const Footer: FC = () => {
         margin-left: 50px;
         margin-top: 20px;
     `}>
-        <UIButton text="プロフィール" handler={testHundler} dark={false} strong={false} />
+        <UIButton text="ログイン" handler={testHundler} dark={false} strong={false} />
     </div>
 
     </footer>
