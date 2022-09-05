@@ -1,9 +1,9 @@
-import { Button } from "@kcctdensan/oonow-libs"
+import { UIButton } from "@kcctdensan/oonow-libs"
 
 export default function Index() {
   return (
     <div>
-      <Button />
+      <UIButton text={'Button'} />
       hello!
     </div>
   )

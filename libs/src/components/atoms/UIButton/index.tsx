@@ -14,7 +14,7 @@ type UIButtonProps = {
   strong?: boolean
 }
 
-const UIButton: FC<UIButtonProps> = ({ text, handler, dark, strong }) => {
+const UIButton: FC<UIButtonProps> = ({ text, handler, dark = false, strong }) => {
   return (
     <button
       className={css`
@@ -23,7 +23,7 @@ const UIButton: FC<UIButtonProps> = ({ text, handler, dark, strong }) => {
         color: ${strong ? colorFg(!dark) : colorFg(dark)};
         border: ${hosoi} solid ${colorFg(dark)};
         border-radius: ${round};
-        font-weight: ${strong ? 700 : 500};
+        font-weight: ${strong ? "700" : "500"};
       `}
       onClick={handler}>
       {text}

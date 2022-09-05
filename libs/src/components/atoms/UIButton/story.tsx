@@ -8,11 +8,14 @@ export default {
 
 export const Variants = () => {
   const dark = useDarkMode()
+  const handler = () => console.log("UIButton pressed!")
+  const opts = { dark, handler }
+
   return (
     <section>
       {[
-        <UIButton text={"Basic"} dark={dark} />,
-        <UIButton text={"Strong"} dark={dark} strong />,
+        <UIButton {...opts} text={"Basic"} />,
+        <UIButton {...opts} text={"Strong"} strong />,
       ].map((e, i) => (
         <div css={{
           margin: "1rem 0",

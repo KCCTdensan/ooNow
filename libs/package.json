@@ -30,20 +30,23 @@
   },
   "exports": {
     ".": {
-      "import": "./dist/main.js",
-      "types": "./types/main.d.ts"
+      "import": "dist/main.js",
+      "types": "types/main.d.ts"
     },
-    "./": "./dist/"
+    "./": "dist/"
   },
   "files": [
     "dist",
     "types"
   ],
   "license": "LGPL-3.0",
+  "main": "dist/main.js",
   "scripts": {
     "build": "tsc && vite build",
     "build-storybook": "build-storybook",
+    "build-vite": "vite build",
     "storybook": "start-storybook -p 6006"
   },
-  "type": "module"
+  "type": "module",
+  "types": "types/main.d.ts"
 }
