@@ -1,6 +1,6 @@
 import {useState} from "react";
-import "./Login.css";
 import React from "react";
+import { css } from "@emotion/css";
 
 function Login(){
   const initialValues = {username: "", mailAddress: "", password: ""};
@@ -49,46 +49,131 @@ function Login(){
     return errors;
   };
   return(
-    <div className="formContainer">
-      <form onSubmit={(e) => handleSubmit(e)}>
-        <h1>ログインフォーム</h1>
+    <div className={styles.body}>
+    <div className={styles.formContainer} >
+      <form className={styles.form} onSubmit={(e) => handleSubmit(e)}>
+        <h1 className={styles.h1}>ログインフォーム</h1>
         <hr />
-        <div className="uiForm">
-          <div className="formField">
-            <label>ユーザー名</label>
+        <div className={styles.uiForm}>
+          <div className={styles.formField}>
+            <label className={styles.formFieldLabel}>ユーザー名</label>
             <input 
+              className={styles.formFieldInput}
               type="text"
               placeholder="ユーザー名" 
               name="username" 
               onChange={(e) => handleChange(e)}/>
           </div>
-          <p className="errorMsg">{formErrors.username}</p>
-          <div className="formField">
-            <label>メールアドレス</label>
+          <p className={styles.errorMsg}>{formErrors.username}</p>
+          <div className={styles.formField}>
+            <label className={styles.formFieldLabel}>メールアドレス</label>
             <input 
+              className={styles.formFieldInput}
               type="text" 
               placeholder="メールアドレス" 
               name="mailAddress" 
               onChange={(e) => handleChange(e)}/>
           </div>
-          <p className="errorMsg">{formErrors.mailAddress}</p>
-          <div className="formField">
-            <label>パスワード</label>
+          <p className={styles.errorMsg}>{formErrors.mailAddress}</p>
+          <div className={styles.formField}>
+            <label className={styles.formFieldLabel}>パスワード</label>
             <input 
+              className={styles.formFieldInput}
               type="text" 
               placeholder="パスワード" 
               name="password" 
               onChange={(e) => handleChange(e)}/>
           </div>
-          <p className="errorMsg">{formErrors.password}</p>
+          <p className={styles.errorMsg}>{formErrors.password}</p>
           <button className="submitButton">ログイン</button>
           {Object.keys(formErrors).length === 0 && isSubmit && (
-            <div className="msgOK">ログインに成功しました</div>
+            <div className={styles.msgOk}>ログインに成功しました</div>
           )}
         </div>
       </form>
     </div>
+    </div>
   );
+}
+
+//css
+
+const styles = {
+  formContainer: css`
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  `,
+  form: css`
+    background-color: white;
+    width: 70%;
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #dfdfdf;
+    box-shadow: 25px 31px 29px -11px #b35f00;
+    border-radius: 10px;
+  `,
+  uiForm: css`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 400px;
+  `,
+  formField: css`
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  `,
+  formFieldInput: css`
+    border: 1px solid gray;
+    padding: 20px;
+    border-radius: 4px;
+  `,
+  formFieldLabel: css`
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 3px;
+  `,
+  errorMsg: css`
+    color: red;
+    margin: 0;
+    align-self: flex-start;
+  `,
+  msgOk: css`
+    color: green;
+    margin-top: 15px;
+  `,
+  button: css`
+    background-color: #ff6518;
+    width: 100%;
+   margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 30px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.2s;
+    &:hover {
+      background-color: #ff5500;
+    }
+  `,
+  h1: css`
+    text-align: center;
+  `,
+  body: css`
+    background: rgb(255,76,0);
+    background: linear-gradient(
+      90deg, 
+      rgba(255,76,0,1) 0%, 
+      rgba(255,128,0,1) 50%, 
+      rgba(255,192,0,1) 100%);
+    overflow-y: hidden;
+  `
 }
 
 export default Login;
