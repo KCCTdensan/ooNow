@@ -1,4 +1,4 @@
-package com.oonow;
+package net.d3bu.oonow;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;

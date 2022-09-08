@@ -1,4 +1,4 @@
-package com.oonow.newarchitecture.components;
+package net.d3bu.oonow.newarchitecture.components;
 
 import com.facebook.jni.HybridData;
 import com.facebook.proguard.annotations.DoNotStrip;

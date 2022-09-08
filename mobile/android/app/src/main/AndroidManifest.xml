@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.oonow">
+  package="net.d3bu.oonow">
 
     <uses-permission android:name="android.permission.INTERNET" />
 

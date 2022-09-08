@@ -1,4 +1,4 @@
-package com.oonow.newarchitecture;
+package net.d3bu.oonow.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.oonow.BuildConfig;
-import com.oonow.newarchitecture.components.MainComponentsRegistry;
-import com.oonow.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import net.d3bu.oonow.BuildConfig;
+import net.d3bu.oonow.newarchitecture.components.MainComponentsRegistry;
+import net.d3bu.oonow.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 
