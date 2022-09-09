@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { css } from "@emotion/css";
-import UIButton from "../../atoms/UIButton";
+import { css } from "@emotion/react";
+import UIButton from "components/atoms/UIButton";
 
 //将来的にはログインページに遷移したい
 const testHundler = () => {

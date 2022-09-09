@@ -41,6 +41,9 @@ module.exports = {
     const path = resolve(__dirname, "../vite.config.ts")
     const { config } = await loadConfigFromFile(path)
     orig.plugins = filterPlugins(orig.plugins)
-    return mergeConfig(orig, config)
+    return mergeConfig(orig, {
+      ...config,
+      resolve: { alias: { "react-native": "react-native-web" } },
+    })
   },
 }

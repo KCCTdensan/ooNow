@@ -15,11 +15,6 @@ export default defineConfig({
     react({ jsxImportSource: "@emotion/react" }),
   ],
   build: {
-    lib: {
-      entry: resolve(__dirname, "src/main.ts"),
-      formats: ["es"],
-      fileName: "main",
-    },
     rollupOptions: { external },
   },
 })

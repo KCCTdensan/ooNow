@@ -1,19 +1,15 @@
 import type { FC } from "react"
-import { css, useTheme } from "@emotion/react"
-
-type UIButtonProps = {
-  text: string
-  handler?: React.MouseEventHandler<HTMLButtonElement>
-  dark?: boolean
-  strong?: boolean
-}
+import type { UIButtonProps } from "."
+import { useTheme } from "@emotion/react"
+import { css } from "@emotion/native"
+import { Button } from "react-native"
 
 const UIButton: FC<UIButtonProps> = ({ text, handler, strong }) => {
   const theme = useTheme()
 
   return (
-    <button
-      css={css`
+    <Button
+      style={css`
         padding: 0.4rem 1.2rem;
         background: ${strong ? theme.bgInv : theme.bg };
         color: ${strong ? theme.fgInv : theme.fg };
@@ -21,9 +17,8 @@ const UIButton: FC<UIButtonProps> = ({ text, handler, strong }) => {
         border-radius: ${theme.round.normal};
         font-weight: ${strong ? "700" : "500"};
       `}
-      onClick={handler}>
-      {text}
-    </button>
+      title={text}
+    />
   )
 }
 

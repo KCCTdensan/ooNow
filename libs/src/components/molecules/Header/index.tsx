@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { css } from "@emotion/css"
+import { css } from "@emotion/react"
 
 //タイトルのアイコンでクリックするとページ遷移したい
 const Header: FC = () => {
