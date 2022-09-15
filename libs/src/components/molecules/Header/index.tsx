@@ -1,19 +1,21 @@
 import { FC } from "react"
 import { css } from "@emotion/react"
+import Logo from "components/atoms/Logo"
 
 //タイトルのアイコンでクリックするとページ遷移したい
 const Header: FC = () => {
   return (
-    <header>
-      <h1 className={styles.h1}>ooなう</h1>
-      
+    <header css={styles.title}>
+      <Logo />
     </header>
   )
 }
 
 const styles = {
-  h1: css`
+  title: css`
     text-align: center;
+    padding-top: 0px;
+    margin-top: 0px;
   `
 }
 export default Header

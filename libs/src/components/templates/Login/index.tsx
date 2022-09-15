@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { css } from "@emotion/react";
 import UIButton from "components/atoms/UIButton"
-
+import Footer from "../../molecules/Footer"
+import Logo from "components/atoms/Logo"
 
 function Login(){
   const initialValues = {username: "", mailAddress: "", password: ""};
@@ -50,50 +51,53 @@ function Login(){
     return errors;
   };
   return(
-    <div className={styles.body}>
-    <div className={styles.formContainer} >
-      <form className={styles.form} onSubmit={(e) => handleSubmit(e)}>
-        <h1 className={styles.h1}>ログインフォーム</h1>
+    <>
+    <div css={styles.body}>
+    <div css={styles.formContainer} >
+      <form css={styles.form} onSubmit={(e) => handleSubmit(e)}>
+        <h1 css={styles.h1}><Logo />ログインフォーム</h1>
         <hr />
-        <div className={styles.uiForm}>
-          <div className={styles.formField}>
-            <label className={styles.formFieldLabel}>ユーザー名</label>
+        <div css={styles.uiForm}>
+          <div css={styles.formField}>
+            <label css={styles.formFieldLabel}>ユーザー名</label>
             <input 
-              className={styles.formFieldInput}
+              css={styles.formFieldInput}
               type="text"
               placeholder="ユーザー名" 
               name="username" 
               onChange={(e) => handleChange(e)}/>
           </div>
-          <p className={styles.errorMsg}>{formErrors.username}</p>
-          <div className={styles.formField}>
-            <label className={styles.formFieldLabel}>メールアドレス</label>
+          <p css={styles.errorMsg}>{formErrors.username}</p>
+          <div css={styles.formField}>
+            <label css={styles.formFieldLabel}>メールアドレス</label>
             <input 
-              className={styles.formFieldInput}
+              css={styles.formFieldInput}
               type="text" 
               placeholder="メールアドレス" 
               name="mailAddress" 
               onChange={(e) => handleChange(e)}/>
           </div>
-          <p className={styles.errorMsg}>{formErrors.mailAddress}</p>
-          <div className={styles.formField}>
-            <label className={styles.formFieldLabel}>パスワード</label>
+          <p css={styles.errorMsg}>{formErrors.mailAddress}</p>
+          <div css={styles.formField}>
+            <label css={styles.formFieldLabel}>パスワード</label>
             <input 
-              className={styles.formFieldInput}
-              type="text" 
+              css={styles.formFieldInput}
+              type="text"     
               placeholder="パスワード" 
               name="password" 
               onChange={(e) => handleChange(e)}/>
           </div>
-          <p className={styles.errorMsg}>{formErrors.password}</p>
+          <p css={styles.errorMsg}>{formErrors.password}</p>
           <UIButton text="ログイン" strong/>
           {Object.keys(formErrors).length === 0 && isSubmit && (
-            <div className={styles.msgOk}>ログインに成功しました</div>
+            <div css={styles.msgOk}>ログインに成功しました</div>
           )}
         </div>
       </form>
     </div>
     </div>
+    <Footer></Footer>
+    </>
   );
 }
 
