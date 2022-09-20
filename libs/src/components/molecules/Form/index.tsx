@@ -54,7 +54,8 @@ function Form(props){
     <div css={styles.body}>
     <div css={styles.formContainer} >
       <form css={styles.form} onSubmit={(e) => handleSubmit(e)}>
-        <h1 css={styles.h1}><Logo />{props.text}</h1>
+        <h1 css={styles.h1}>  
+          <Logo />{props.text}</h1>
         <hr />
         <div css={styles.uiForm}>
           <div css={styles.formField}>

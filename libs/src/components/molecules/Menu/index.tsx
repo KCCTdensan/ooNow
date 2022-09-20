@@ -58,10 +58,12 @@ const styles = {
         align-items: center;
         justify-content: center;
         cursor: pointer;
+        font-weight: bold;
     `,
     childItem: css`
         transition: height 0.2s linear, opacity 0.2s ease-in;
         cursor: pointer;
         overflow: hidden;
+        font-weight: bold;
     `,
 }
