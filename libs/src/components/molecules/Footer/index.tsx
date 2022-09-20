@@ -10,31 +10,31 @@ const testHundler = () => {
 const Footer: FC = () => {
   return (
     <>
-      <footer className={styles.footer}>
-        <ul className={styles.footer}>
+      <footer css={styles.footer}>
+        <ul css={styles.footer}>
           <li>外部リンク</li>
           <ul>
             <li>
-              <a className={styles.a} href="https://d3bu.net">
+              <a css={styles.a} href="https://d3bu.net">
                 KCCT 電算部HP
               </a>
             </li>
             <li>
               <a
-                className={styles.a}
+                css={styles.a}
                 href="https://twitter.com/intent/user?screen_name=kcct_densan"
               >
                 KCCT 電算部公式Twitter
               </a>
             </li>
             <li>
-              <a className={styles.a} href="http://www.kobe-kosen.ac.jp">
+              <a css={styles.a} href="http://www.kobe-kosen.ac.jp">
                 神戸高専HP
               </a>
             </li>
           </ul>
         </ul>
-        <div className={styles.button}>
+        <div css={styles.button}>
           <UIButton
             text="ログイン"
             handler={testHundler}
@@ -42,8 +42,16 @@ const Footer: FC = () => {
             strong={false}
           />
         </div>
+        <div css={styles.button}>
+        <UIButton 
+            text="サインアップ"
+            handler={testHundler}
+            dark={false}
+            strong={false}
+          />
+        </div>
       </footer>
-      <div className={styles.copy}>&copy; 神戸高専電算部</div>
+      <div css={styles.copy}>&copy; 神戸高専電算部</div>
     </>
   );
 };
