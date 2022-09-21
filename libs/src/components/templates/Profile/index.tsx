@@ -4,6 +4,7 @@ import Icon from "components/atoms/Icon";
 import Header from "components/molecules/Header";
 import UIButton from "components/atoms/UIButton";
 import TimeLine from "components/molecules/TimeLine";
+import Footer from "components/molecules/Footer";
 
 const Profile = () => {
   const [text, setText] = useState("");
@@ -65,6 +66,7 @@ const Profile = () => {
           <TimeLine />
         </div>
       </div>
+      <Footer />
     </>
   );
 };
@@ -81,5 +83,6 @@ const styles = {
   `,
   TL: css`
     margin-top: 100px;
+    margin-bottom: 40px;
   `,
 };
