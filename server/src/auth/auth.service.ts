@@ -1,3 +1,4 @@
+import * as bcrypt from "bcrypt"
 import { Injectable } from "@nestjs/common"
 import { JwtService } from "@nestjs/jwt"
 import { UsersService } from "users/users.service"
@@ -9,17 +10,21 @@ export class AuthService {
     private jwtService: JwtService
   ) {}
 
-  async validateUser(username: string, pass: string): Promise<any> {
-    const user = await this.usersService.findOne(username)
-    if (user && user.password === pass) {
-      const { password, ...result } = user
-      return result
+  // local戦略向け
+  async validateUser(username: string, password: string): Promise<any> {
+    const user = await this.usersService.findScreen(username)
+    if (user && (await bcrypt.compare(password, user.pass))) {
+      const { pass, ...res } = user
+      return res
     }
     return null
   }
 
-  async login(user: any) {
-    const payload = { username: user.username, sub: user.userId }
+  // controllerが呼ぶやつ
+  // 認証後の処理
+  async login(userSub: any /* { id } */) {
+    const user = await this.usersService.findId(userSub.id)
+    const payload = { sub: user.id, iat: Date.now() }
     return {
       access_token: this.jwtService.sign(payload),
     }
