@@ -1,0 +1,17 @@
+version: "3"
+services:
+  server:
+    context: .
+    dockerfile: server/Dockerfile
+    env_file:
+      - server/.env
+    ports:
+      - "8080:3000"
+  db:
+    image: postgres:alpine
+    env_file:
+      - .db.env
+    volumes:
+      - "db:/var/lib/postgresql/data"
+volumes:
+  db:

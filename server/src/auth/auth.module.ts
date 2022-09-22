@@ -3,10 +3,10 @@ import { ConfigModule } from "@nestjs/config"
 import { PassportModule } from "@nestjs/passport"
 import { JwtModule } from "@nestjs/jwt"
 import { UsersModule } from "users/users.module"
+import { LocalStrategy } from "./strategies/local.strategy"
+import { JwtStrategy } from "./strategies/jwt.strategy"
 import { AuthService } from "./auth.service"
 import { AuthController } from "./auth.controller"
-import { LocalStrategy } from "./local.strategy"
-import { JwtStrategy } from "./jwt.strategy"
 import { jwtConstants } from "./constants"
 
 @Module({
@@ -18,7 +18,7 @@ import { jwtConstants } from "./constants"
     PassportModule,
     JwtModule.register({
       secret: jwtConstants.secret,
-      signOptions: { expiresIn: "60s" },
+      signOptions: {},
     }),
   ],
   exports: [AuthService],

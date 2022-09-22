@@ -3,6 +3,11 @@ dist/
 
 yarn.lock
 
+# dev
+
+*.env
+*.db
+
 # USE YARN
 
 package-lock.json

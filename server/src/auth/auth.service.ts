@@ -12,7 +12,7 @@ export class AuthService {
 
   // local戦略向け
   async validateUser(username: string, password: string): Promise<any> {
-    const user = await this.usersService.findScreen(username)
+    const user = await this.usersService.user({ screen: username })
     if (user && (await bcrypt.compare(password, user.pass))) {
       const { pass, ...res } = user
       return res
@@ -23,8 +23,8 @@ export class AuthService {
   // controllerが呼ぶやつ
   // 認証後の処理
   async login(userSub: any /* { id } */) {
-    const user = await this.usersService.findId(userSub.id)
-    const payload = { sub: user.id, iat: Date.now() }
+    const user = await this.usersService.user({ id: userSub.id })
+    const payload = { sub: user!.id, iat: Date.now() }
     return {
       access_token: this.jwtService.sign(payload),
     }
