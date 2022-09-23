@@ -1,8 +1,8 @@
-import { css } from "@emotion/react";
-import React from "react";
-import Header from "components/molecules/Header";
-import Footer from "components/molecules/Footer";
-import TimeLine from "components/molecules/TimeLine";
+import { css } from "@emotion/react"
+import React from "react"
+import Header from "components/organisms/Header"
+import Footer from "components/organisms/Footer"
+import TimeLine from "components/organisms/TimeLine"
 
 const Home: React.FC = () => {
   return (
@@ -14,10 +14,10 @@ const Home: React.FC = () => {
       </div>
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
 
 const styles = {
   TL: css`
@@ -45,4 +45,4 @@ const styles = {
       right: 10px;
     }
   `,
-};
+}

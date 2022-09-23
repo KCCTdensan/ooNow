@@ -1,10 +1,9 @@
-import type { FC } from "react"
+import { FC } from "react"
 import { css, useTheme } from "@emotion/react"
 
 type UIButtonProps = {
   text: string
   handler?: React.MouseEventHandler<HTMLButtonElement>
-  dark?: boolean
   strong?: boolean
 }
 

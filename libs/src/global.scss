@@ -1,0 +1,15 @@
+@import "styles/sanitize.css";
+@import "styles/fonts.css";
+
+html, body {
+  margin: 0;
+  font-family: "Murecho", system-ui;
+
+  *:focus-visible {
+    outline: auto;
+  }
+}
+
+ul {
+  list-style: none;
+}

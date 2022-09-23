@@ -1,6 +1,6 @@
-import { Home } from "@kcctdensan/oonow-libs"
+import { Home } from "@kcctdensan/oonow-libs/next"
 
-export default function Index() {
+export default function IndexScreen() {
   return (
     <Home />
   )

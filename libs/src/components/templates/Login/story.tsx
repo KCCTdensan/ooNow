@@ -1,12 +1,10 @@
 import Login from "."
 
 export default {
-    title: 'Templates/Login',
-    component: Login,
-};
+  title: "Templates/Login",
+  component: Login,
+}
 
 export const Logins = () => {
-    return (
-        <Login />
-    );
+  return <Login />
 }

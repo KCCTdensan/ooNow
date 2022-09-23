@@ -2,12 +2,10 @@ import Form from "."
 import React from "react"
 
 export default {
-    title: "Molecules/Form",
-    component: Form,
+  title: "Molecules/Form",
+  component: Form,
 }
 
 export const Forms = () => {
-    return(
-        <Form text={"Login"} action={"login"}></Form>
-    )
+  return <Form text={"Login"} action={"login"}></Form>
 }

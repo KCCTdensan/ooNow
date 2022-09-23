@@ -1,27 +1,25 @@
-import React from "react";
-import { css } from "@emotion/react";
+import React from "react"
+import { css } from "@emotion/react"
 
 type Props = {
-  s: string;
-  w: string;
-  h: string;
-};
+  iconUrl: string
+}
 
-const Icon: React.FC<Props> = ({ s, w, h }) => {
+const Icon: React.FC<Props> = ({ iconUrl }) => {
   return (
     <img
       css={css`
         border: 3px;
         border-radius: 50%;
-        width: ${w + "px"};
-        height: ${h + "px"};
+        width: 100%;
+        height: 100%;
       `}
-      src={s}
-      alt="Icon"
+      src={iconUrl}
+      alt='Icon'
     />
-  );
-};
+  )
+}
 
-export default Icon;
+const styles = {}
 
-const styles = {};
+export default Icon

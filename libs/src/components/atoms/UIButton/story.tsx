@@ -7,11 +7,7 @@ export default {
 
 export const Variants = () => (
   <section>
-    <div>
-      <UIButton text={"Basic"} />
-    </div>
-    <div>
-      <UIButton text={"Strong"} strong />
-    </div>
+    <UIButton text={"Basic"} />
+    <UIButton text={"Strong"} strong />
   </section>
 )

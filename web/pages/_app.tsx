@@ -1,6 +1,6 @@
 import "@kcctdensan/oonow-libs/style.css"
 import { ThemeProvider } from "@emotion/react"
-import { theme, darkTheme } from "@kcctdensan/oonow-libs"
+import { theme, darkTheme } from "@kcctdensan/oonow-libs/next"
 
 export default function App({ Component, pageProps }) {
   return (
