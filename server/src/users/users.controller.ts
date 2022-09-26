@@ -1,5 +1,14 @@
 import * as bcrypt from "bcrypt"
-import { Controller, Get, Req, Post, Body, UseGuards } from "@nestjs/common"
+import {
+  Controller,
+  Get,
+  Post,
+  Patch,
+  Delete,
+  Req,
+  Body,
+  UseGuards,
+} from "@nestjs/common"
 import { JwtAuthGuard } from "auth/guards/jwt-auth.guard"
 import { Public } from "auth/decorators/auth.decorator"
 import { UsersService } from "./users.service"
@@ -17,6 +26,12 @@ export class UsersController {
   }
 
   @Public()
+  @Get("count")
+  async getUserCount() {
+    return { value: await this.usersService.count() }
+  }
+
+  @Public()
   @Post("create")
   async createUser(@Body() data: any) {
     const { passRaw, posts, ...params } = data
@@ -26,7 +41,7 @@ export class UsersController {
     })
   }
 
-  @Post("update")
+  @Patch("update")
   async updateUser(@Body() data: any) {
     const { posts, ...params } = data
     return this.usersService.update({
@@ -37,7 +52,7 @@ export class UsersController {
 
   // change password
 
-  @Post("delete")
+  @Delete("delete")
   async deleteUser(@Body("id") id: string) {
     return this.usersService.delete({ id })
   }
