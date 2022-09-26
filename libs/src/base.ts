@@ -7,12 +7,13 @@ export { default as Logo } from "components/atoms/Logo"
 export { default as UIButton } from "components/atoms/UIButton"
 
 // Molecules
-export { default as Form } from "components/molecules/Form"
 export { default as Menu } from "components/molecules/Menu"
 
 // Organisms
 export { default as Footer } from "components/organisms/Footer"
 export { default as Header } from "components/organisms/Header"
+export { default as LoginForm } from "components/organisms/LoginForm"
+export { default as RegisterForm } from "components/organisms/RegisterForm"
 export { default as TimeLine } from "components/organisms/TimeLine"
 
 // Templates

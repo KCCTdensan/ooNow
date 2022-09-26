@@ -1,11 +1,11 @@
 import React from "react"
-import Form from "components/molecules/Form"
+import LoginForm from "components/organisms/LoginForm"
 import Footer from "components/organisms/Footer"
 
 const Login = () => {
   return (
     <>
-      <Form text={"ログインフォーム"} action={"ログイン"} />
+      <LoginForm />
       <Footer />
     </>
   )
