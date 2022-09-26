@@ -1,23 +1,23 @@
-import { useState } from "react"
-import { css } from "@emotion/react"
-import Icon from "components/atoms/Icon"
-import Header from "components/organisms/Header"
-import UIButton from "components/atoms/UIButton"
-import Footer from "components/organisms/Footer"
-import TimeLine from "components/organisms/TimeLine"
+import { useState } from "react";
+import { css } from "@emotion/react";
+import Icon from "components/atoms/Icon";
+import Header from "components/organisms/Header";
+import UIButton from "components/atoms/UIButton";
+import Footer from "components/organisms/Footer";
+import TimeLine from "components/organisms/TimeLine";
 
 const Profile = () => {
-  const [text, setText] = useState("")
-  const [addText, setAddText] = useState("")
-  const [flag, setFlag] = useState(false)
+  const [text, setText] = useState("");
+  const [addText, setAddText] = useState("");
+  const [flag, setFlag] = useState(false);
   const onClickAddText = () => {
-    setAddText(text)
-    setText("")
-    setFlag(false)
-  }
+    setAddText(text);
+    setText("");
+    setFlag(false);
+  };
   const onClickSetFlag = () => {
-    setFlag(true)
-  }
+    setFlag(true);
+  };
   return (
     <>
       <Header />
@@ -25,15 +25,20 @@ const Profile = () => {
         <div
           css={css`
             display: flex;
-          `}>
-          <Icon s='../../../../images/sample.png' w='45' h='45' />
+            width: 45px;
+            height: 45px;
+          `}
+        >
+          <Icon iconUrl="../../../../images/sample.png" />
           <div
             css={css`
               display: flex;
               justify-content: flex-end;
               margin-left: 674px;
-            `}>
-            <UIButton text='編集' handler={onClickSetFlag} />
+              height: 150%;
+            `}
+          >
+            <UIButton text="編集" handler={onClickSetFlag} />
           </div>
         </div>
         <div css={styles.name}>UserName</div>
@@ -43,19 +48,21 @@ const Profile = () => {
               display: ${flag ? "block" : "none"};
             `}
             value={text}
-            onChange={e => setText(e.target.value)}
+            onChange={(e) => setText(e.target.value)}
           />
           <p
             css={css`
               display: ${flag ? "none" : "block"};
-            `}>
+            `}
+          >
             {addText}
           </p>
           <div
             css={css`
               display: ${flag ? "block" : "none"};
-            `}>
-            <UIButton text='編集完了' handler={onClickAddText} />
+            `}
+          >
+            <UIButton text="編集完了" handler={onClickAddText} />
           </div>
         </div>
         <div css={styles.TL}>
@@ -64,10 +71,10 @@ const Profile = () => {
       </div>
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Profile
+export default Profile;
 
 const styles = {
   name: css`
@@ -81,4 +88,4 @@ const styles = {
     margin-top: 100px;
     margin-bottom: 40px;
   `,
-}
+};
