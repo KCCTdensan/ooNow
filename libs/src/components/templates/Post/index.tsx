@@ -5,7 +5,7 @@ import Footer from "components/organisms/Footer";
 import Icon from "components/atoms/Icon";
 import UIButton from "components/atoms/UIButton";
 
-const Post = () => {
+const Post: React.FC = () => {
   const [text, setText] = useState("");
   const [templates, setTemplates] = useState([""]);
   const [count, setCount] = useState(0);
@@ -20,11 +20,10 @@ const Post = () => {
   const texts = templates
     .join("\n")
     .split("\n")
-    .map((item, index) => {
+    .map((item: any, index: any) => {
       return (
         <React.Fragment key={index}>
-          {item}
-          <br />
+          <li>{item}</li>
         </React.Fragment>
       );
     });
@@ -32,7 +31,10 @@ const Post = () => {
   return (
     <>
       <Header />
-      <div css={styles.post}>
+      <div css={css`
+                display: flex;
+                margin-bottom: 10px;
+              `}>
         <div
           css={css`
             width: 60px;
@@ -43,7 +45,11 @@ const Post = () => {
           <Icon iconUrl="../../../../images/sample.png" />
         </div>
         <input
-          css={styles.text}
+          css={css`
+          margin-left: 25px;
+          border-radius: 0.8rem;
+          width: 400px;
+        `}
           name="post"
           placeholder="テンプレートを入力してください"
           autoFocus
@@ -51,32 +57,33 @@ const Post = () => {
           onChange={(e) => setText(e.target.value)}
         />
       </div>
-      <div css={styles.button}>
+      <div css={css`
+                margin-left: 900px;
+                margin-bottom: 20px;
+                &:hover {
+                  cursor: pointer;
+                }
+              `}>
         <UIButton text="登録" handler={onClickHandler} />
       </div>
-      <div>{texts}</div>
+      <div css={css`
+        text-align: center;
+        font-size: 150%;
+      `}>
+        一覧
+      </div>
+      <div css={css`
+              text-align: center;
+              margin-right: 50px;
+            `}>
+        <ul>
+        {texts}
+        </ul>
+      </div>
       <Footer />
     </>
   );
 };
 
-const styles = {
-  post: css`
-    display: flex;
-    margin-bottom: 10px;
-  `,
-  text: css`
-    margin-left: 25px;
-    border-radius: 0.8rem;
-    width: 400px;
-  `,
-  button: css`
-    margin-left: 900px;
-    margin-bottom: 20px;
-    &:hover {
-      cursor: pointer;
-    }
-  `,
-};
 
 export default Post;
