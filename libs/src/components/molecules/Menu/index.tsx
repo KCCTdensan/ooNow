@@ -29,11 +29,31 @@ const Menu: FC<Props> = ({ title, /* withIcon, */ children }) => {
 
   return (
     <>
-      <div onClick={handleClick} css={styles.item}>
+      <div onClick={handleClick} css={
+        css`
+        width: 100px;
+        height: 25px;
+        border: 0px solid;
+        padding: 10px 20px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-weight: bold;
+      `
+      }>
         {title}
       </div>
       <div
-        css={styles.childItem}
+        css={
+          css`
+            transition: height 0.2s linear, opacity 0.2s ease-in;
+            cursor: pointer;
+            overflow: hidden;
+            font-weight: bold;
+          `
+        }
         style={{
           height: children && showChildren ? `${childHeight}px` : "0px",
           opacity: children && showChildren ? 1 : 0,
@@ -46,23 +66,4 @@ const Menu: FC<Props> = ({ title, /* withIcon, */ children }) => {
 
 export default Menu
 
-const styles = {
-  item: css`
-    width: 100px;
-    height: 25px;
-    border: 0px solid;
-    padding: 10px 20px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-weight: bold;
-  `,
-  childItem: css`
-    transition: height 0.2s linear, opacity 0.2s ease-in;
-    cursor: pointer;
-    overflow: hidden;
-    font-weight: bold;
-  `,
-}
+

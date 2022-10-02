@@ -11,8 +11,15 @@ type HeaderProps = {
 
 const Header: FC = ({ user }) => {
   return (
-    <header css={styles.title}>
-      <div css={styles.menu}>
+    <header css={
+        css`
+            padding-top: 0px;
+            margin-top: 0px;
+            display: flex;
+            justify-content: space-between;
+        `
+    }>
+      <div>
         <Menu title='Menu'>
           {!user ? (
             <>
@@ -32,7 +39,9 @@ const Header: FC = ({ user }) => {
           )}
         </Menu>
       </div>
-      <div css={styles.logo}>
+      <div css={css`
+    display: block;
+  `}>
         <Logo />
       </div>
       <div />
@@ -40,16 +49,6 @@ const Header: FC = ({ user }) => {
   )
 }
 
-const styles = {
-  title: css`
-    padding-top: 0px;
-    margin-top: 0px;
-    display: flex;
-    justify-content: space-between;
-  `,
-  logo: css`
-    display: block;
-  `,
-}
+
 
 export default Header

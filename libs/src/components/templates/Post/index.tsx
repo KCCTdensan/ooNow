@@ -32,7 +32,10 @@ const Post = () => {
   return (
     <>
       <Header />
-      <div css={styles.post}>
+      <div css={css`
+          display: flex;
+          margin-bottom: 10px;
+        `}>
         <div
           css={css`
             width: 60px;
@@ -43,7 +46,11 @@ const Post = () => {
           <Icon iconUrl="../../../../images/sample.png" />
         </div>
         <input
-          css={styles.text}
+          css={css`
+            margin-left: 25px;
+            border-radius: 0.8rem;
+            width: 400px;
+            `}
           name="post"
           placeholder="テンプレートを入力してください"
           autoFocus
@@ -51,7 +58,13 @@ const Post = () => {
           onChange={(e) => setText(e.target.value)}
         />
       </div>
-      <div css={styles.button}>
+      <div css={css`
+            margin-left: 900px;
+            margin-bottom: 20px;
+            &:hover {
+              cursor: pointer;
+            }
+          `}>
         <UIButton text="登録" handler={onClickHandler} />
       </div>
       <div>{texts}</div>
@@ -60,23 +73,6 @@ const Post = () => {
   );
 };
 
-const styles = {
-  post: css`
-    display: flex;
-    margin-bottom: 10px;
-  `,
-  text: css`
-    margin-left: 25px;
-    border-radius: 0.8rem;
-    width: 400px;
-  `,
-  button: css`
-    margin-left: 900px;
-    margin-bottom: 20px;
-    &:hover {
-      cursor: pointer;
-    }
-  `,
-};
+
 
 export default Post;

@@ -21,7 +21,10 @@ const Profile = () => {
   return (
     <>
       <Header />
-      <div css={styles.body}>
+      <div css={css`
+            margin-left: 300px;
+            margin-right: 300px;
+          `}>
         <div
           css={css`
             display: flex;
@@ -41,7 +44,9 @@ const Profile = () => {
             <UIButton text="編集" handler={onClickSetFlag} />
           </div>
         </div>
-        <div css={styles.name}>UserName</div>
+        <div css={css`
+              font-weight: bold;
+            `}>UserName</div>
         <div>
           <input
             css={css`
@@ -65,7 +70,10 @@ const Profile = () => {
             <UIButton text="編集完了" handler={onClickAddText} />
           </div>
         </div>
-        <div css={styles.TL}>
+        <div css={css`
+              margin-top: 100px;
+              margin-bottom: 40px;
+            `}>
           <TimeLine />
         </div>
       </div>
@@ -76,16 +84,4 @@ const Profile = () => {
 
 export default Profile;
 
-const styles = {
-  name: css`
-    font-weight: bold;
-  `,
-  body: css`
-    margin-left: 300px;
-    margin-right: 300px;
-  `,
-  TL: css`
-    margin-top: 100px;
-    margin-bottom: 40px;
-  `,
-};
+
