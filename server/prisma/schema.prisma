@@ -10,6 +10,7 @@ generator client {
 model User {
   id        String   @id @default(cuid())
   pass      String
+  ready     Boolean  @default(false)
   screen    String   @unique
   nick      String?
   email     String?
