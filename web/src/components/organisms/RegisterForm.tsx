@@ -20,7 +20,7 @@ const RegisterForm: FC = () => {
       body: JSON.stringify({
         screen: username,
         email,
-        password,
+        passRaw: password,
       }),
     })
 
@@ -28,6 +28,7 @@ const RegisterForm: FC = () => {
       if (res.status === 400) {
         setError("invalid request")
       } else {
+        // todo: これ反映させる
         setError("server error")
       }
     }

@@ -3,6 +3,11 @@ import { Injectable } from "@nestjs/common"
 import { JwtService } from "@nestjs/jwt"
 import { UsersService } from "users/users.service"
 
+export type Payload = {
+  sub: string
+  iat: number
+}
+
 @Injectable()
 export class AuthService {
   constructor(
@@ -24,7 +29,7 @@ export class AuthService {
   // 認証後の処理
   async login(userSub: any /* { id } */) {
     const user = await this.usersService.user({ id: userSub.id })
-    const payload = { sub: user!.id, iat: Date.now() }
+    const payload: Payload = { sub: user!.id, iat: Date.now() }
     return {
       access_token: this.jwtService.sign(payload),
     }
