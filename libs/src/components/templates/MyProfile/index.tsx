@@ -6,7 +6,7 @@ import UIButton from "components/atoms/UIButton";
 import Footer from "components/organisms/Footer";
 import TimeLine from "components/organisms/TimeLine";
 
-const Profile = () => {
+const MyProfile = () => {
   const [text, setText] = useState("");
   const [addText, setAddText] = useState("");
   const [flag, setFlag] = useState(false);
@@ -32,7 +32,7 @@ const Profile = () => {
             height: 45px;
           `}
         >
-          <Icon iconUrl="../../../../images/sample.png" />
+          <Icon iconUrl="../../../../images/sample.png"></Icon>
           <div
             css={css`
               display: flex;
@@ -82,6 +82,6 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default MyProfile;
 
 

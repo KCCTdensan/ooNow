@@ -1,10 +1,10 @@
 import React from "react";
-import { css } from "@emotion/react";
-import Icon from "components/atoms/Icon";
+import { css } from "@emotion/react"
+import Icon from "components/atoms/Icon"
 
-const TimeLine = () => {
-  return (
-    <>
+const User = () => {
+    return (
+        <>
       <div css={
         css`
         margin-top: 10px;
@@ -22,7 +22,7 @@ const TimeLine = () => {
             height: 45px;
           `
           }>
-            <Icon iconUrl="../../../../images/sample.png" />
+            <a href="#"><Icon iconUrl="../../../../images/sample.png" /></a> {/* アイコンクリックでそのユーザーのプロフィールへ遷移 */}
           </div>
           <div
             css={css`
@@ -37,29 +37,19 @@ const TimeLine = () => {
               <div className="name">
                 <strong>UserName</strong>
               </div>
-              <div className="time" css={
-                css`
-                font-size: 70%;
-                margin-left: 20px;
-              `
-              }>
-                yyyy/mm/dd
-              </div>
             </div>
             <div className="text" css={
               css`
               white-space: normal;
             `
             }>
-              SampleText
+              profile
             </div>
           </div>
         </div>
       </div>
     </>
-  );
-};
+    )
+}
 
-export default TimeLine;
-
-
+export default User
