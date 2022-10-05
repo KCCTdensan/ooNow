@@ -20,6 +20,7 @@ const UIButton: FC<UIButtonProps> = ({ text, handler, strong, submit }) => {
         border: ${theme.border.hosoi} solid ${theme.fg};
         border-radius: ${theme.round.normal};
         font-weight: ${strong ? "700" : "500"};
+        cursor: pointer;
       `}
       onClick={handler}>
       {text}
