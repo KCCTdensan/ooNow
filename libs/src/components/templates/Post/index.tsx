@@ -32,7 +32,7 @@ const Post = () => {
             cols="20" 
             rows="5" 
             autoFocus="true"
-            placeholder="いま、なにしてる？">
+            placeholder="いましていること">
 
             </textarea>
             </form>
@@ -42,7 +42,7 @@ const Post = () => {
                     margin-left: 40px;
                 `
             }>
-            <UIButton text="投稿"/>
+            <UIButton text="なう"/>
             </div>
         </div>
         <Footer></Footer>
