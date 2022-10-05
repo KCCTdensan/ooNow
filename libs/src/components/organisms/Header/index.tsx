@@ -19,7 +19,11 @@ const Header: FC = ({ user }) => {
             justify-content: space-between;
         `
     }>
-      <div>
+      <div css={
+        css`
+            width: 20%;
+        `
+      }>
         <Menu title='Menu'>
           {!user ? (
             <>
@@ -40,7 +44,11 @@ const Header: FC = ({ user }) => {
         </Menu>
       </div>
       <div css={css`
+        width:50%;
+        `}/>
+      <div css={css`
     display: block;
+    width: 100%;
   `}>
         <Logo />
       </div>
