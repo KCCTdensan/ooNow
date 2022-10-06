@@ -3,6 +3,8 @@ import { css } from "@emotion/react"
 import Header from "components/organisms/Header"
 import Footer from "components/organisms/Footer"
 import UIButton from "components/atoms/UIButton"
+import NowButton from "components/molecules/NowButton"
+import Choice from "components/organisms/Choice"
 
 const Post = () => {
     return (
@@ -13,18 +15,31 @@ const Post = () => {
         </div>
         <div css={
             css`
+                justify-content: center;
+                display: flex;
+                margin-bottom: 20px
+            `
+        }>
+        <NowButton text="遊び"/>
+        <NowButton text="食事"/>
+        <NowButton text="睡眠"/>
+        <NowButton text="勉強・仕事"/>
+        </div>
+        <div css={
+            css`
                 display: flex;
                 justify-content: center;
                 margin-bottom: 50px;
                 
             `
         }>
+            
             <form action="">
-            <textarea
-            css={
+            <input css={
                 css`
                     border: medium solid black;
                     border-radius: 1em;
+                    resize: none;
                 `
             }
             name="" 
@@ -34,7 +49,7 @@ const Post = () => {
             autoFocus="true"
             placeholder="いましていること">
 
-            </textarea>
+            </input>
             </form>
             <div css={
                 css`
@@ -42,8 +57,17 @@ const Post = () => {
                     margin-left: 40px;
                 `
             }>
-            <UIButton text="なう"/>
-            </div>
+        </div>
+        <div css={
+            css`
+                display: flex;
+                justify-content: center;
+                margin-bottom: 50px;
+                
+            `
+        }>
+            <UIButton text="なう" strong/>
+        </div>
         </div>
         <Footer></Footer>
         </>
