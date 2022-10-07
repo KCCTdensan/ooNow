@@ -19,8 +19,8 @@ const MyProfile = () => {
     return (
         <div
         css={css`
-            margin-left: 300px;
-            margin-right: 300px;
+            margin-left: 100px;
+            margin-right: 100px;
             `}>
         <div
             css={css`

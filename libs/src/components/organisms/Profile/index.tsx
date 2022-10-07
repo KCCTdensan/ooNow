@@ -9,8 +9,8 @@ const Profile = () => {
     return (
         <div
         css={css`
-            margin-left: 300px;
-            margin-right: 300px;
+            margin-left: 100px;
+            margin-right: 100px;
         `}>
         <div
         css={css`
@@ -37,7 +37,7 @@ const Profile = () => {
             margin-top: 100px;
             margin-bottom: 40px;
             `}>
-            <TimeLine />
+        <TimeLine />
         </div>
         </div>
         
