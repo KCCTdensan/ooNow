@@ -1,54 +1,40 @@
-import React from "react"
-import { css } from "@emotion/react"
+import { FC } from "react"
+import { css, useTheme } from "@emotion/react"
 
-import Icon from "components/atoms/Icon"
+import IconLink from "components/molecules/IconLink"
 
-const User = () => {
+type UserProps = {
+  user: UserProfile
+  to?: string
+}
+
+const User: FC<UserProps> = ({
+  user: { screen, nick, iconUrl, isPublic, created, friends, followers },
+  to,
+}) => {
+  const theme = useTheme()
+
   return (
-    <>
+    <div
+      css={css`
+        display: flex;
+        align-items: center;
+      `}>
       <div
         css={css`
-        margin-top: 10px;
-        margin-bottom: 10px;
-      `}>
-        <div
-          css={css`
-          display: flex;
+          width: 3rem;
+          height: 3rem;
+          margin-right: 0.7rem;
         `}>
-          <div
-            className='icon'
-            css={css`
-            width: 45px;
-            height: 45px;
-          `}>
-            <a href='#'>
-              <Icon iconUrl='../../../../images/sample.png' />
-            </a>{" "}
-            {/* アイコンクリックでそのユーザーのプロフィールへ遷移 */}
-          </div>
-          <div
-            css={css`
-              margin-left: 10px;
-            `}>
-            <div
-              css={css`
-                display: flex;
-              `}>
-              <div className='name'>
-                <strong>UserName</strong>
-              </div>
-            </div>
-            <div
-              className='text'
-              css={css`
-              white-space: normal;
-            `}>
-              profile
-            </div>
-          </div>
-        </div>
+        <IconLink to={to} iconUrl={iconUrl} />
       </div>
-    </>
+      <div>
+        <strong>
+          {nick} @{screen}
+        </strong>
+        <p css={css`margin: 0;`}>hello!</p>
+      </div>
+    </div>
   )
 }
 

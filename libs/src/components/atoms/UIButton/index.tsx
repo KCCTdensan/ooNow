@@ -10,6 +10,7 @@ export type UIButtonProps = {
 
 const UIButton: FC<UIButtonProps> = ({ text, handler, strong, submit }) => {
   const theme = useTheme()
+
   return (
     <button
       type={submit ? "submit" : "button"}
