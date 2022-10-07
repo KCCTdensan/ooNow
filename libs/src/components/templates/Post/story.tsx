@@ -1,11 +1,11 @@
-import Post from ".";
-import React from "react";
+import Post from "."
+import React from "react"
 
 export default {
-    title: " Templates / Post ",
-    component: Post
+  title: " Templates / Post ",
+  component: Post,
 }
 
 export const Posts = () => {
-    return <Post></Post>
+  return <Post></Post>
 }

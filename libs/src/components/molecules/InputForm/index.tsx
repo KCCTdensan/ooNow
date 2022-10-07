@@ -15,17 +15,15 @@ const InputForm: FC<InputFormProps> = ({
     <div
       css={css`
         display: flex;
-        flex-direction: column;
         width: 100%;
-      `}
-    >
+        flex-direction: column;
+      `}>
       <label
         css={css`
           font-size: 15px;
           font-weight: 600;
           margin-bottom: 3px;
-        `}
-      >
+        `}>
         {label}
       </label>
       <input

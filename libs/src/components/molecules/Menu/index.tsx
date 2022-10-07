@@ -29,35 +29,31 @@ const Menu: FC<Props> = ({ title, /* withIcon, */ children }) => {
 
   return (
     <>
-      <div onClick={handleClick} css={
-        css`
-        width: 100px;
-        height: 25px;
-        border: 0px solid;
-        padding: 10px 20px;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        font-weight: bold;
-      `
-      }>
+      <div
+        onClick={handleClick}
+        css={css`
+          width: 100px;
+          height: 25px;
+          border: 0px solid;
+          padding: 10px 20px;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          font-weight: bold;
+        `}>
         {title}
       </div>
       <div
-        css={
-          css`
-            transition: height 0.2s linear, opacity 0.2s ease-in;
-            cursor: pointer;
-            overflow: hidden;
-            font-weight: bold;
-          `
-        }
-        style={{
-          height: children && showChildren ? `${childHeight}px` : "0px",
-          opacity: children && showChildren ? 1 : 0,
-        }}>
+        css={css`
+          height: ${children && showChildren ? `${childHeight}px` : "0px"};
+          cursor: pointer;
+          font-weight: bold;
+          transition: height 0.2s linear, opacity 0.2s ease-in;
+          opacity: ${children && showChildren ? "1" : "0"};
+          overflow: hidden;
+        `}>
         <div ref={childElement}>{children}</div>
       </div>
     </>
@@ -65,5 +61,3 @@ const Menu: FC<Props> = ({ title, /* withIcon, */ children }) => {
 }
 
 export default Menu
-
-

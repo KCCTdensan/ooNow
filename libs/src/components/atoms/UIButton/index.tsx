@@ -1,7 +1,7 @@
 import { FC } from "react"
 import { css, useTheme } from "@emotion/react"
 
-type UIButtonProps = {
+export type UIButtonProps = {
   text: string
   handler?: React.MouseEventHandler<HTMLButtonElement>
   strong?: boolean

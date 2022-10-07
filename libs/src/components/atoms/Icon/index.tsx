@@ -20,5 +20,4 @@ const Icon: React.FC<Props> = ({ iconUrl }) => {
   )
 }
 
-
 export default Icon

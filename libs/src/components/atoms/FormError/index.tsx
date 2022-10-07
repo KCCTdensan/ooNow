@@ -12,8 +12,7 @@ const FormError: FC<FromErrorProps> = ({ msg }) => {
         color: red;
         margin: 0;
         align-self: flex-start;
-      `}
-    >
+      `}>
       {msg}
     </p>
   )

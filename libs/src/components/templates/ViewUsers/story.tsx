@@ -1,10 +1,10 @@
-import ViewUsers from ".";
+import ViewUsers from "."
 
 export default {
-    title: "Templates / ViewUsers",
-    component: ViewUsers,
+  title: "Templates / ViewUsers",
+  component: ViewUsers,
 }
 
 export const ViewUserses = () => {
-    return <ViewUsers />
+  return <ViewUsers />
 }

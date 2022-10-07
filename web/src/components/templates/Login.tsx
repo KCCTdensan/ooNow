@@ -1,9 +1,9 @@
 import { useRouter } from "next/router"
 
 import { SingleBoxFrame, Footer } from "@kcctdensan/oonow-libs/next"
-import RegisterForm from "components/organisms/RegisterForm"
+import LoginForm from "components/organisms/LoginForm"
 
-const Register: FC = () => {
+const Login: FC = () => {
   const router = useRouter()
   const { user, to } = router.query
 
@@ -18,11 +18,11 @@ const Register: FC = () => {
   return (
     <>
       <SingleBoxFrame>
-        <RegisterForm userInit={user} onSuccess={onSuccess} />
+        <LoginForm userInit={user} onSuccess={onSuccess} />
       </SingleBoxFrame>
       <Footer />
     </>
   )
 }
 
-export default Register
+export default Login

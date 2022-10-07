@@ -1,6 +1,7 @@
 import { FC, forwardRef } from "react"
-import UIButton from "components/atoms/UIButton"
+
 import Link from "components/atoms/Link"
+import UIButton from "components/atoms/UIButton"
 
 type ButtonLinkProps = {
   text: string

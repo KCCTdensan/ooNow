@@ -9,7 +9,7 @@ const ServiceInfo = () => {
   return (
     <StatusBanner
       vals={[
-        { text: "ユーザー数", val: ucnt?.value },
+        { text: "現在の登録ユーザー数", val: ucnt?.value },
       ]}
     />
   )

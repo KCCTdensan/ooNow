@@ -1,17 +1,18 @@
-import { useState } from "react";
-import { css } from "@emotion/react";
-import Icon from "components/atoms/Icon";
-import Header from "components/organisms/Header";
-import UIButton from "components/atoms/UIButton";
-import Footer from "components/organisms/Footer";
-import TimeLine from "components/organisms/TimeLine";
+import { useState } from "react"
+import { css } from "@emotion/react"
+
+import Icon from "components/atoms/Icon"
+import UIButton from "components/atoms/UIButton"
+import Header from "components/organisms/Header"
+import Footer from "components/organisms/Footer"
+import TimeLine from "components/organisms/TimeLine"
 
 const UserProfile = () => {
-  
   return (
     <>
       <Header />
-      <div css={css`
+      <div
+        css={css`
             margin-left: 300px;
             margin-right: 300px;
           `}>
@@ -20,24 +21,23 @@ const UserProfile = () => {
             display: flex;
             width: 45px;
             height: 45px;
-          `}
-        >
-          <Icon iconUrl="../../../../images/sample.png" />
+          `}>
+          <Icon iconUrl='../../../../images/sample.png' />
         </div>
-        <div css={css`
+        <div
+          css={css`
               font-weight: bold;
-            `}>UserName</div>
+            `}>
+          UserName
+        </div>
         <div>
+          <p>ProfileText</p>
 
-            
-          <p>
-            ProfileText
-          </p>
-
-          <UIButton text="Follow"></UIButton>
+          <UIButton text='Follow'></UIButton>
         </div>
 
-        <div css={css`
+        <div
+          css={css`
               margin-top: 100px;
               margin-bottom: 40px;
             `}>
@@ -46,9 +46,7 @@ const UserProfile = () => {
       </div>
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default UserProfile;
-
-
+export default UserProfile

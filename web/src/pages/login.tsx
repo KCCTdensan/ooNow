@@ -1,4 +1,4 @@
-import { Login } from "@kcctdensan/oonow-libs/next"
+import Login from "components/templates/Login"
 
 export default function LoginScreen() {
   return (

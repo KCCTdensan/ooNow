@@ -24,6 +24,10 @@ export class UsersService {
     return this.prisma.user.findUnique({ where })
   }
 
+  async exists(where: Prisma.UserWhereUniqueInput): Promise<boolean> {
+    return (await this.prisma.user.findFirst({ where })) !== null
+  }
+
   async users(params: {
     skip?: number
     take?: number

@@ -1,5 +1,6 @@
 import { css } from "@emotion/react"
 import React from "react"
+
 import Header from "components/organisms/Header"
 import Footer from "components/organisms/Footer"
 import TimeLine from "components/organisms/TimeLine"
@@ -8,8 +9,8 @@ const Home: React.FC = () => {
   return (
     <>
       <Header />
-      <div css={
-          css`
+      <div
+        css={css`
             margin: 2em 0;
             margin-left: auto;
             margin-right: auto;
@@ -33,8 +34,7 @@ const Home: React.FC = () => {
             &:after {
               right: 10px;
             }
-          `
-      }>
+          `}>
         <TimeLine />
         <TimeLine />
       </div>
@@ -44,4 +44,3 @@ const Home: React.FC = () => {
 }
 
 export default Home
-

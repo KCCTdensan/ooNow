@@ -9,17 +9,17 @@ import {
   FormErrorSuggest,
   BrandTitle,
   InputForm,
-  RegisterFormInputs,
+  LoginFormInputs,
 } from "@kcctdensan/oonow-libs/next"
 import ServiceInfo from "components/organisms/ServiceInfo"
 
-type RegisterFormProps = {
+type LoginFormProps = {
   userInit?: string
   onSuccess?: any
 }
 
 // 元はlibsにあるやつ
-const RegisterForm: FC<RegisterFormProps> = ({
+const LoginForm: FC<LoginFormProps> = ({
   userInit = "",
   onSuccess = () => {},
 }) => {
@@ -31,10 +31,10 @@ const RegisterForm: FC<RegisterFormProps> = ({
     setValue,
     setError,
     clearErrors,
-  } = useForm<RegisterFormInputs>()
+  } = useForm<LoginFormInputs>()
 
   const onSubmit = async ({ username, email, password }) => {
-    const res = await fetch("/api/bff/register", {
+    const res = await fetch("/api/bff/login", {
       method: "POST",
       body: JSON.stringify({
         screen: username,
@@ -44,7 +44,7 @@ const RegisterForm: FC<RegisterFormProps> = ({
     })
 
     if (!res.ok) {
-      if (res.status === 400) {
+      if (res.status == 400) {
         setError("invalid request")
       } else {
         setError("server error")
@@ -62,10 +62,10 @@ const RegisterForm: FC<RegisterFormProps> = ({
     setUser(value)
     if (value) {
       const res = await fetch(`/api/users/profile/${value}`)
-      if (res.ok) {
+      if (!res.ok) {
         setError("username", {
-          type: "exists",
-          message: "このIDは既に使用されています",
+          type: "notfound",
+          message: "このIDは登録されていません",
         })
         return
       }
@@ -79,7 +79,7 @@ const RegisterForm: FC<RegisterFormProps> = ({
 
   return (
     <>
-      <BrandTitle text='サインアップ' />
+      <BrandTitle text='ログイン' />
       <ServiceInfo />
       <hr />
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -99,11 +99,11 @@ const RegisterForm: FC<RegisterFormProps> = ({
             opts={{ onChange: onUsername }}
           />
           {errors.username && <FormError msg={errors.username.message} />}
-          {errors.username?.type === "exists" && (
+          {errors.username?.type === "notfound" && (
             <FormErrorSuggest
-              msg='あなたのアカウントですか？'
-              text='ログイン'
-              to={`/login?user=${user}`}
+              msg='アカウントを作成しますか？'
+              text='サインアップ'
+              to={`/register?user=${user}`}
             />
           )}
           <InputForm
@@ -132,11 +132,11 @@ const RegisterForm: FC<RegisterFormProps> = ({
             }}
           />
           {errors.password && <FormError msg={errors.password.message} />}
-          <UIButton text='サインアップ' strong submit />
+          <UIButton text='ログイン' strong submit />
         </div>
       </form>
     </>
   )
 }
 
-export default RegisterForm
+export default LoginForm

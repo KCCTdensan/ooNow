@@ -1,5 +1,6 @@
 import { FC } from "react"
 import { css } from "@emotion/react"
+
 import Link from "components/atoms/Link"
 import Logo from "components/atoms/Logo"
 import Menu from "components/molecules/Menu"
@@ -11,19 +12,17 @@ type HeaderProps = {
 
 const Header: FC = ({ user }) => {
   return (
-    <header css={
-        css`
-            padding-top: 0px;
-            margin-top: 0px;
-            display: flex;
-            justify-content: space-between;
-        `
-    }>
-      <div css={
-        css`
+    <header
+      css={css`
+        padding-top: 0px;
+        margin-top: 0px;
+        display: flex;
+        justify-content: space-between;
+      `}>
+      <div
+        css={css`
             width: 20%;
-        `
-      }>
+        `}>
         <Menu title='Menu'>
           {!user ? (
             <>
@@ -43,20 +42,21 @@ const Header: FC = ({ user }) => {
           )}
         </Menu>
       </div>
-      <div css={css`
-        width:50%;
-        `}/>
-      <div css={css`
-    display: block;
-    width: 100%;
-  `}>
+      <div
+        css={css`
+          width:50%;
+        `}
+      />
+      <div
+        css={css`
+          display: block;
+          width: 100%;
+        `}>
         <Logo />
       </div>
       <div />
     </header>
   )
 }
-
-
 
 export default Header

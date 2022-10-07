@@ -1,21 +1,22 @@
-import React, { useState } from "react";
-import { css } from "@emotion/react";
-import Header from "components/organisms/Header";
-import Footer from "components/organisms/Footer";
-import Icon from "components/atoms/Icon";
-import UIButton from "components/atoms/UIButton";
+import React, { useState } from "react"
+import { css } from "@emotion/react"
+
+import Icon from "components/atoms/Icon"
+import UIButton from "components/atoms/UIButton"
+import Header from "components/organisms/Header"
+import Footer from "components/organisms/Footer"
 
 const Snippet: React.FC = () => {
-  const [text, setText] = useState("");
-  const [templates, setTemplates] = useState([""]);
-  const [count, setCount] = useState(0);
+  const [text, setText] = useState("")
+  const [templates, setTemplates] = useState([""])
+  const [count, setCount] = useState(0)
 
   // templatesにinputの中身を追加
   const onClickHandler = () => {
-    setTemplates([...templates, text]);
-    setText("");
+    setTemplates([...templates, text])
+    setText("")
     setCount(count + 1)
-  };
+  }
 
   // templatesの中身を展開して改行
   const texts = templates
@@ -26,13 +27,14 @@ const Snippet: React.FC = () => {
         <React.Fragment key={index}>
           <li>{item}</li>
         </React.Fragment>
-      );
-    });
+      )
+    })
 
   return (
     <>
       <Header />
-      <div css={css`
+      <div
+        css={css`
                 display: flex;
                 margin-bottom: 10px;
               `}>
@@ -41,9 +43,8 @@ const Snippet: React.FC = () => {
             width: 60px;
             height: 60px;
             margin-left: 400px;
-          `}
-        >
-          <Icon iconUrl="../../../../images/sample.png" />
+          `}>
+          <Icon iconUrl='../../../../images/sample.png' />
         </div>
         <input
           css={css`
@@ -51,40 +52,40 @@ const Snippet: React.FC = () => {
           border-radius: 0.8rem;
           width: 400px;
         `}
-          name="Snippet"
-          placeholder="テンプレートを入力してください"
+          name='Snippet'
+          placeholder='テンプレートを入力してください'
           autoFocus
           value={text}
-          onChange={(e) => setText(e.target.value)}
+          onChange={e => setText(e.target.value)}
         />
       </div>
-      <div css={css`
+      <div
+        css={css`
                 margin-left: 900px;
                 margin-bottom: 20px;
                 &:hover {
                   cursor: pointer;
                 }
               `}>
-        <UIButton text="登録" handler={onClickHandler} />
+        <UIButton text='登録' handler={onClickHandler} />
       </div>
-      <div css={css`
+      <div
+        css={css`
         text-align: center;
         font-size: 150%;
       `}>
         一覧
       </div>
-      <div css={css`
+      <div
+        css={css`
               text-align: center;
               margin-right: 50px;
             `}>
-        <ul>
-        {texts}
-        </ul>
+        <ul>{texts}</ul>
       </div>
       <Footer />
     </>
-  );
-};
+  )
+}
 
-
-export default Snippet;
+export default Snippet

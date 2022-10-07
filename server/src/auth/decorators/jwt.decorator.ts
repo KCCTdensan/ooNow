@@ -1,5 +1,10 @@
-import { createParamDecorator, ExecutionContext } from "@nestjs/common"
+import {
+  createParamDecorator,
+  ExecutionContext,
+  UnauthorizedException,
+} from "@nestjs/common"
 import jwt_decode from "jwt-decode"
+
 import { Payload } from "../auth.service"
 
 export const Jwt = createParamDecorator(
@@ -8,7 +13,7 @@ export const Jwt = createParamDecorator(
     const auth = req.headers.authorization
 
     if (!auth.startsWith("Bearer")) {
-      throw new Error("Maybe not a JWT ?!")
+      throw new UnauthorizedException()
     }
 
     const data: Payload = jwt_decode(auth.slice(7))

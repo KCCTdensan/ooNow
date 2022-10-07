@@ -1,5 +1,3 @@
-import { apiBase } from "libs/constants"
-
 export default async function proxy(req, res) {
   const { slug } = req.query
   const url = `${process.env.API_HOST}/${slug.join("/")}`

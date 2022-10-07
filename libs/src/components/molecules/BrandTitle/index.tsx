@@ -3,19 +3,20 @@ import { css } from "@emotion/react"
 
 import Logo from "components/atoms/Logo"
 
-type RegisterFormHeadProps = {}
+type BrandTitleProps = {
+  text: string
+}
 
-const RegisterFormHead: FC<RegisterFormHeadProps> = () => {
+const BrandTitle: FC<BrandTitleProps> = ({ text }) => {
   return (
     <h1
       css={css`
         text-align: center;
-      `}
-    >
+      `}>
       <Logo />
-      {"サインアップ"}
+      {text}
     </h1>
   )
 }
 
-export default RegisterFormHead
+export default BrandTitle

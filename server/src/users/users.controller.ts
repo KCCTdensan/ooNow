@@ -10,15 +10,16 @@ import {
   Param,
   Query,
   UseGuards,
+  ConflictException,
+  BadRequestException,
   NotFoundException,
 } from "@nestjs/common"
 import { JwtAuthGuard } from "auth/guards/jwt-auth.guard"
 import { Public } from "auth/decorators/auth.decorator"
+import { Jwt } from "auth/decorators/jwt.decorator"
 import { UsersService } from "./users.service"
 
 const saltRounds = 10
-
-// todo: PublicProfile type
 
 @Controller("users")
 export class UsersController {
@@ -47,11 +48,31 @@ export class UsersController {
   @Public()
   @Post("create")
   async createUser(@Body() data: any) {
-    const { passRaw, posts, ...params } = data
-    return this.usersService.create({
-      ...params,
+    const { screen, passRaw } = data
+
+    if (await this.usersService.exists({ screen })) {
+      throw new ConflictException("user already exists")
+    }
+
+    const creation = {
+      screen: data.screen,
+      nick: data.nick,
+      email: data.email,
+      iconUrl: data.iconUrl,
+      isPublic: data.isPublic,
+    }
+
+    const validPass = (s: string) => s.length >= 8
+
+    if (!creation.screen || !validPass(passRaw)) {
+      throw new BadRequestException()
+    }
+
+    const { pass, ...userBody } = await this.usersService.create({
+      ...creation,
       pass: await bcrypt.hash(passRaw, saltRounds),
     })
+    return userBody
   }
 
   @Patch("update")
@@ -73,7 +94,9 @@ export class UsersController {
   // @Get("search")
 
   @Get("profile")
-  getProfile(@Req() req: any) {
-    return req.user
+  async getMyProfile(@Jwt("sub") id: string) {
+    const prof = await this.usersService.profile({ id })
+    if (!prof) throw new NotFoundException()
+    return prof
   }
 }
