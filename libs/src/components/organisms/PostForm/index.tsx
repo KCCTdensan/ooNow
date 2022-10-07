@@ -1,6 +1,5 @@
 import React from "react"
 import { css } from "@emotion/react"
-
 import UIButton from "components/atoms/UIButton"
 import NowButton from "components/molecules/NowButton"
 import Choice from "components/organisms/Choice"
