@@ -11,6 +11,8 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.36.1",
     "react-native": "^0.70.0",
+    "recoil": "^0.7.5",
+    "recoil-persist": "^4.2.0",
     "sanitize.css": "^13.0.0"
   },
   "devDependencies": {

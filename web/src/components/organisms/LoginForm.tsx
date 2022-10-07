@@ -45,9 +45,17 @@ const LoginForm: FC<LoginFormProps> = ({
 
     if (!res.ok) {
       if (res.status == 400) {
-        setError("invalid request")
+        console.error("invalid request")
+      } else if (res.status === 401) {
+        setError("password", {
+          type: "auth",
+          message: "パスワードが正しくありません",
+        })
       } else {
-        setError("server error")
+        setError("submit", {
+          type: "service",
+          message: "サーバーでエラーが発生しました",
+        })
       }
       return
     }
@@ -74,7 +82,7 @@ const LoginForm: FC<LoginFormProps> = ({
   }
 
   useEffect(() => {
-    setValue("username", userInit)
+    if (userInit) setValue("username", userInit)
   }, [])
 
   return (
@@ -133,6 +141,7 @@ const LoginForm: FC<LoginFormProps> = ({
           />
           {errors.password && <FormError msg={errors.password.message} />}
           <UIButton text='ログイン' strong submit />
+          {errors.submit && <FormError msg={errors.submit.message} />}
         </div>
       </form>
     </>
