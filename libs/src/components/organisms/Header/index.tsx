@@ -40,6 +40,9 @@ const Header: FC = ({ user }) => {
               </Link>
             </>
           )}
+          <Link to='/company'>
+            <Menu title='Company'/>
+          </Link>
         </Menu>
       </div>
       <div
