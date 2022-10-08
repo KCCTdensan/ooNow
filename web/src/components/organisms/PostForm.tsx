@@ -1,28 +1,20 @@
-import { FC } from "react"
+import { FC, useEffect, useState } from "react"
 import { css } from "@emotion/react"
 import { useForm, SubmitHandler } from "react-hook-form"
 
-import UIButton from "components/atoms/UIButton"
-import NowButton from "components/molecules/NowButton"
-import Choice from "components/organisms/Choice"
+import {
+  UIButton,
+  NowButton,
+  Choice,
+  ButtonLink,
+  FormError,
+  FormErrorSuggest,
+  BrandTitle,
+  InputForm,
+  LoginFormInputs,
+} from "@kcctdensan/oonow-libs/next"
 
-export type PostFormInputs = {
-  category: string
-  content: string
-}
-
-type PostFormProps = {
-  onSubmit?: SubmitHandler<FormInputs>
-  ServiceInfo?: ReactNode
-}
-
-const PostForm: FC<PostFormProps> = ({
-  register,
-  handleSubmit,
-  formState,
-
-  onSubmit = () => {},
-}) => {
+const Post = () => {
   return (
     <>
       <div
