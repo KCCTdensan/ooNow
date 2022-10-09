@@ -17,6 +17,7 @@ const Post = () => {
             justify-content: center;
             display: flex;
             margin-bottom: 20px;
+            margin-top: 7em;
           `
         }
             >
@@ -30,7 +31,7 @@ const Post = () => {
                 display: flex;
                 justify-content: center;
                 margin-bottom: 50px;
-                
+                margin-top: 2em;
             `}>
         <form action=''>
           <input

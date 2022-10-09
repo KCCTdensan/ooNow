@@ -10,7 +10,15 @@ const Company = () => {
   return (
     <>
       <Header />
-      <CompanyForm />
+        <div css={css`
+          width: 100%;
+          max-width: 600px;
+          margin-right: auto;
+          margin-left: auto;
+          margin-bottom: 3em;`
+        }>
+          <CompanyForm />
+        </div>
       <Footer />
     </>
   )

@@ -1,5 +1,6 @@
 import React from "react";
 import { css } from "@emotion/react"
+import UIButton from "components/atoms/UIButton"
 
 const CompanyForm = () => {
     return (
@@ -166,18 +167,14 @@ const CompanyForm = () => {
             <input type='radio' name='trend' checked />
             その他
         </label>
-        <div
-            css={css`
-                    
-                `}>
-            <input
-            css={css`
-                    cursor: pointer;
-                `}
-            type='submit'
-            value='送信'
-            />
+        <br/>
+        <div css={css`
+          margin-top: 3em;
+          text-align: center;
+          `}>
+          <UIButton text='送信' type='submit' strong/>
         </div>
+        
         </form>
         </>
     )

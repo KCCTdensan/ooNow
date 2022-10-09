@@ -8,7 +8,14 @@ const UserProfile = () => {
   return (
     <>
       <Header />
-      <Profile />
+      <div css={css`
+        width: 100%;
+        max-width: 800px;
+        margin-right: auto;
+        margin-left: auto;`
+      }>
+        <Profile />
+      </div>
       <Footer />
     </>
   )
