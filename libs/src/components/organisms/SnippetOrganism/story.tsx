@@ -2,7 +2,7 @@ import React from "react";
 import SnippetOrganism from ".";
 
 export default {
-    title: "organisims / SnippetOrganisms",
+    title: "organisms / SnippetOrganisms",
     component: SnippetOrganism,
 }
 

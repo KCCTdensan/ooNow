@@ -21,7 +21,8 @@ const Header: FC = ({ user }) => {
       `}>
       <div
         css={css`
-            width: 20%;
+            width: 100%;
+
         `}>
         <Menu title='Menu'>
           {!user ? (
@@ -45,11 +46,11 @@ const Header: FC = ({ user }) => {
           </Link>
         </Menu>
       </div>
-      <div
+      {/* <div
         css={css`
           width:50%;
         `}
-      />
+      /> */}
       <div
         css={css`
           display: block;

@@ -9,7 +9,7 @@ const Home: React.FC = () => {
   return (
     <>
       <Header />
-      <div>
+      <div
         css={css`
             margin: 2em 0;
             margin-left: auto;

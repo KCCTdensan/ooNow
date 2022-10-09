@@ -11,13 +11,15 @@ const Post = () => {
   return (
     <>
       <Header></Header>
-      <div></div>
       <div
-        css={css`
-                justify-content: center;
-                display: flex;
-                margin-bottom: 20px
-            `}>
+        css={
+          css`
+            justify-content: center;
+            display: flex;
+            margin-bottom: 20px;
+          `
+        }
+            >
         <NowButton text='遊び' />
         <NowButton text='食事' />
         <NowButton text='睡眠' />

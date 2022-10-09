@@ -2,6 +2,7 @@ import { FC } from "react"
 import { css } from "@emotion/react"
 
 import ButtonLink from "components/molecules/ButtonLink"
+import Icon from "components/atoms/Icon"
 
 const Footer: FC = () => {
   return (
@@ -33,17 +34,7 @@ const Footer: FC = () => {
                   color: white;
                 `}
                 href='https://d3bu.net'>
-                KCCT 電算部HP
-              </a>
-            </li>
-            <li>
-              <a
-                css={css`
-                  text-decoration: none;
-                  color: white;
-                `}
-                href='https://twitter.com/intent/user?screen_name=kcct_densan'>
-                KCCT 電算部公式Twitter
+                d3bu.net
               </a>
             </li>
             <li>
@@ -53,7 +44,19 @@ const Footer: FC = () => {
                   color: white;
                 `}
                 href='http://www.kobe-kosen.ac.jp'>
-                神戸高専HP
+                KCCT
+              </a>
+            </li>
+            <li css={
+              css`
+                width: 40px;
+                height: 40px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+              `
+            }>
+              <a href="https://twitter.com/intent/user?screen_name=kcct_densan">
+                <Icon iconUrl="../../../../images/Twitter social icons - circle - white.png"/>
               </a>
             </li>
           </ul>
