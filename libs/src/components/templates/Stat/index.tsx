@@ -21,7 +21,7 @@ const Stat = () => {
 			`
 		} 
 		className="info">
-	        <h1>〇〇なう htmlFor Company</h1>
+	        <h1>〇〇なう For Company</h1>
 	        <h3>当サービスを利用しているユーザーの統計情報を表示します。</h3>
   		</div>
 
