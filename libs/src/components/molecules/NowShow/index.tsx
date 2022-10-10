@@ -6,7 +6,7 @@ type nowProps = {
     nowValue: number,
     wasValue: number,
     name: string,
-    age: number,
+    age: string,
     gender: string,
     color: any,
 }
@@ -63,7 +63,6 @@ const NowShow: React.FC<nowProps> = ({size,nowValue,name,wasValue,age,gender,col
 						display: block;
 						width: 470px;
 						height: 260px;
-
 						background-color: rgb(243, 243, 243);
 						border-radius: 1%;
 						text-align: center;
@@ -95,7 +94,7 @@ const NowShow: React.FC<nowProps> = ({size,nowValue,name,wasValue,age,gender,col
 						css`
 							margin: 5%;
 						`
-					} className="text">次のユーザーに人気：{age.toString()}代 {gender}性</div>
+					} className="text">次のユーザーに人気：{age.toString()} {gender}性</div>
 	                <div css={
 						css`
 							margin: 5%;

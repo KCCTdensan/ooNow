@@ -7,5 +7,5 @@ export default {
 }
 
 export const NowShows = () => {
-    return <NowShow size={100} name="カテゴリー名" nowValue={50} wasValue={25} age={30} gender="男" color="#00ffaa" />
+    return <NowShow size={100} name="カテゴリー名" nowValue={50} wasValue={25} age="30代" gender="男" color="#00ffaa" />
 }

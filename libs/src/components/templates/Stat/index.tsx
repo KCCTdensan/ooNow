@@ -31,7 +31,7 @@ const Stat = () => {
 					left: 10px;
 				`
 			}>
-				<NowShow size={100} name="Sample" nowValue={50} wasValue={25} age={30} gender="男" color="aquamarine"/>
+				<NowShow size={100} name="ゲーム" nowValue={0} wasValue={2} age="10代" gender="男" color="aquamarine"/>
 			</div>
 			<div css={
 				css`
@@ -40,7 +40,7 @@ const Stat = () => {
 					left: 130px;
 				`
 			}>
-				<NowShow size={212} name="Game" nowValue={100} wasValue={50} age={10} gender="男" color="#0051ff" />
+				<NowShow size={212} name="勉強" nowValue={2} wasValue={9} age="10代" gender="男" color="#0051ff" />
 			</div>
 			<div css={
 				css`
@@ -49,7 +49,7 @@ const Stat = () => {
 					left: 30px;
 				`
 			}>
-				<NowShow size={212} name="study" nowValue={40} wasValue={60} age={10} gender="女" color="#00d836" />
+				<NowShow size={212} name="アウトドア" nowValue={2} wasValue={6} age="20代" gender="男" color="#00d836" />
 			</div>
 			<div css={
 				css`
@@ -58,7 +58,7 @@ const Stat = () => {
 					left: 210px;
 				`
 			}>
-				<NowShow size={173} name="job" nowValue={120} wasValue={60} age={30} gender="男" color="#ffae00" />
+				<NowShow size={173} name="仕事" nowValue={120} wasValue={60} age="20代、30代" gender="男" color="#ffae00" />
 			</div>
 		</div>
 		<Footer />
