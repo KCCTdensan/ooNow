@@ -31,7 +31,10 @@ const PostForm: FC<PostFormProps> = ({
             display: flex;
             margin-bottom: 20px
           `}>
-          <NowButton text='遊び' />
+          <NowButton
+            text='遊び'
+            handler = () => {}
+          />
           <NowButton text='食事' />
           <NowButton text='睡眠' />
           <NowButton text='勉強・仕事' />

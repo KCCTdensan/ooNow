@@ -14,6 +14,8 @@ type UserProfile = {
   followers: number
 }
 
+
+// いらんかもしれん
 type PostProfile = {
   screen: string
   nick?: string
@@ -30,6 +32,7 @@ export const userProfileState = atom<UserProfile | null>({
   effects: [persistAtom],
 })
 
+// これもいらんかも
 export const postContentState = atom<PostContent | null>({
   key: "postContent",
   default: null,

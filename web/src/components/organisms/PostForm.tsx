@@ -18,17 +18,20 @@ export type PostFormInputs = {
 }
 
 type PostFormProps = {
-  onSubmit?: SubmitHandler<PostFormInputs>
+  postInit?: string
+  onSuccess?: any
 }
 
 const PostForm: FC<PostFormProps> = ({
+  postInit = "",
   content,
   category,
-  onSubmit = () => {},
+  onSuccess = () => {},
 }) => {
   // RegisterFormを見様見真似で組み変え
 
-  const [user, setUser] = useState(userInit)
+  // こ↑こ↓わからん
+  const [postContent, setPostContent] = useState(postInit)
   const {
     register,
     handleSubmit,
@@ -64,7 +67,7 @@ const PostForm: FC<PostFormProps> = ({
   }
 
   useEffect(() => {
-    if (userInit) setValue("username", userInit)
+    if (postInit) setValue("postcontent", postInit)
   }, [])
 
   // 元はlibsにあるやつ
@@ -78,10 +81,21 @@ const PostForm: FC<PostFormProps> = ({
             display: flex;
             margin-bottom: 20px
           `}>
-          <NowButton text='遊び' />
-          <NowButton text='食事' />
-          <NowButton text='睡眠' />
-          <NowButton text='勉強・仕事' />
+          <NowButton
+            text='遊び'
+            handler = () => {
+              category: 'play'
+            }
+          />
+          <NowButton
+            text='食事'
+          />
+          <NowButton
+            text='睡眠'
+          />
+          <NowButton
+            text='勉強・仕事'
+          />
         </div>
         <NowForm
           name='content'
