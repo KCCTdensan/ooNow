@@ -1,13 +1,12 @@
 import React from "react"
 import { css } from "@emotion/react"
 import NowShow from "components/molecules/NowShow"
-import Header from "components/organisms/Header"
-import Footer from "components/organisms/Footer"
+import CommonLayout from "components/layouts/CommonLayout"
 
 const Stat = () => {
 	return (
 		<>
-		<Header />
+		<CommonLayout>
 		<div css={
 			css`
 				width:70%;
@@ -61,7 +60,7 @@ const Stat = () => {
 				<NowShow size={173} name="仕事" nowValue={120} wasValue={60} age="20代、30代" gender="男" color="#ffae00" />
 			</div>
 		</div>
-		<Footer />
+        </CommonLayout>
 		</>
 	)
 } 

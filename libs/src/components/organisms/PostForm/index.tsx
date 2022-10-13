@@ -17,7 +17,7 @@ type PostFormProps = {
 
 const PostForm: FC<PostFormProps> = ({
   register,
-  handleSubmit,
+  handleSubmit = () => {},
   formState,
 
   onSubmit = () => {},
@@ -31,10 +31,7 @@ const PostForm: FC<PostFormProps> = ({
             display: flex;
             margin-bottom: 20px
           `}>
-          <NowButton
-            text='遊び'
-            handler = () => {}
-          />
+          <NowButton text='遊び' handler={() => {}} />
           <NowButton text='食事' />
           <NowButton text='睡眠' />
           <NowButton text='勉強・仕事' />
@@ -52,7 +49,8 @@ const PostForm: FC<PostFormProps> = ({
           css={css`
             margin-top: 80px;
             margin-left: 40px;
-        `}/>
+        `}
+        />
         <div
           css={css`
             display: flex;

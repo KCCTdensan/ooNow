@@ -3,13 +3,12 @@ import { css } from "@emotion/react"
 
 import Icon from "components/atoms/Icon"
 import UIButton from "components/atoms/UIButton"
-import Header from "components/organisms/Header"
-import Footer from "components/organisms/Footer"
+import CommonLayout from "components/layouts/CommonLayout"
 import MyProfile from "components/organisms/MyProfile"
 const MyProfiles = () => {
   return (
     <>
-      <Header />
+      <CommonLayout>
       <div css={css`
         width: 100%;
         max-width: 800px;
@@ -18,7 +17,7 @@ const MyProfiles = () => {
       }>
         <MyProfile></MyProfile>
       </div>
-      <Footer />
+      </CommonLayout>
     </>
   )
 }

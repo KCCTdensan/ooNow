@@ -3,14 +3,12 @@ import { css } from "@emotion/react"
 
 import UIButton from "components/atoms/UIButton"
 import NowButton from "components/molecules/NowButton"
-import Header from "components/organisms/Header"
-import Footer from "components/organisms/Footer"
-import Choice from "components/organisms/Choice"
+import CommonLayout from "components/layouts/CommonLayout"
 
 const Post = () => {
   return (
     <>
-      <Header></Header>
+      <CommonLayout>
       <div
         css={
           css`
@@ -62,7 +60,7 @@ const Post = () => {
           <UIButton text='なう' strong />
         </div>
       </div>
-      <Footer></Footer>
+      </CommonLayout>
     </>
   )
 }

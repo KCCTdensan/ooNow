@@ -1,11 +1,7 @@
 import { useRouter } from "next/router"
 import { useRecoilState } from "recoil"
 
-import {
-  SingleBoxFrame,
-  Footer,
-  userProfileState,
-} from "@kcctdensan/oonow-libs/next"
+import { SingleBoxLayout, userProfileState } from "@kcctdensan/oonow-libs/next"
 import RegisterForm from "components/organisms/RegisterForm"
 
 const Register: FC = () => {
@@ -24,12 +20,9 @@ const Register: FC = () => {
   }
 
   return (
-    <>
-      <SingleBoxFrame>
-        <RegisterForm userInit={user} onSuccess={onSuccess} />
-      </SingleBoxFrame>
-      <Footer />
-    </>
+    <SingleBoxLayout>
+      <RegisterForm userInit={user} onSuccess={onSuccess} />
+    </SingleBoxLayout>
   )
 }
 

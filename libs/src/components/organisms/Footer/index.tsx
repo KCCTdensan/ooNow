@@ -47,16 +47,15 @@ const Footer: FC = () => {
                 KCCT
               </a>
             </li>
-            <li css={
-              css`
+            <li
+              css={css`
                 width: 40px;
                 height: 40px;
                 margin-top: 5px;
                 margin-bottom: 5px;
-              `
-            }>
-              <a href="https://twitter.com/intent/user?screen_name=kcct_densan">
-                <Icon iconUrl="../../../../images/Twitter social icons - circle - white.png"/>
+              `}>
+              <a href='https://twitter.com/intent/user?screen_name=kcct_densan'>
+                <Icon iconUrl='../../../../images/Twitter social icons - circle - white.png' />
               </a>
             </li>
           </ul>

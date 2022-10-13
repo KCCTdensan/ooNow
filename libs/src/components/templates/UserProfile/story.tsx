@@ -1,5 +1,4 @@
 import UserProfile from "."
-import React from "react"
 
 export default {
   title: "Templates / UserProfile",

@@ -1,15 +1,14 @@
 import React, { useState } from "react"
 import { css } from "@emotion/react"
-import Header from "components/organisms/Header"
-import Footer from "components/organisms/Footer"
+import CommonLayout from "components/layouts/CommonLayout"
 import SnippetOrganism from "components/organisms/SnippetOrganism"
 
 const Snippet: React.FC = () => {
   return (
     <>
-      <Header />
+      <CommonLayout>
       <SnippetOrganism/>
-      <Footer />
+      </CommonLayout>
     </>
   )
 }

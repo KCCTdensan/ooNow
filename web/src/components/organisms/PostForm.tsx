@@ -18,6 +18,8 @@ export type PostFormInputs = {
 }
 
 type PostFormProps = {
+  content: string
+  category: string
   postInit?: string
   onSuccess?: any
 }
@@ -54,7 +56,7 @@ const PostForm: FC<PostFormProps> = ({
       if (res.status === 400) {
         console.error("invalid request")
       } else {
-        setError("submit", {
+        setError("content", {
           type: "service",
           message: "サーバーでエラーが発生しました",
         })
@@ -81,21 +83,10 @@ const PostForm: FC<PostFormProps> = ({
             display: flex;
             margin-bottom: 20px
           `}>
-          <NowButton
-            text='遊び'
-            handler = () => {
-              category: 'play'
-            }
-          />
-          <NowButton
-            text='食事'
-          />
-          <NowButton
-            text='睡眠'
-          />
-          <NowButton
-            text='勉強・仕事'
-          />
+          <NowButton text='遊び' handler={setValue("category", "play")} />
+          <NowButton text='食事' handler={setValue("category", "dish")} />
+          <NowButton text='睡眠' handler={setValue("category", "sleep")} />
+          <NowButton text='勉強・仕事' handler={setValue("category", "work")} />
         </div>
         <NowForm
           name='content'
@@ -110,7 +101,8 @@ const PostForm: FC<PostFormProps> = ({
           css={css`
             margin-top: 80px;
             margin-left: 40px;
-        `}/>
+        `}
+        />
         <div
           css={css`
             display: flex;
@@ -126,4 +118,3 @@ const PostForm: FC<PostFormProps> = ({
 }
 
 export default PostForm
-

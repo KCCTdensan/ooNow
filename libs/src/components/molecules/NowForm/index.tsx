@@ -3,16 +3,7 @@ import { css } from "@emotion/react"
 
 type NowFormProps = {}
 
-const NowForm: FC<NowFormProps> = ({
-  name,
-  type,
-  cols,
-  rows,
-  autoFocus,
-  placeholder,
-  register,
-  opts,
-}) => {
+const NowForm: FC<NowFormProps> = props => {
   return (
     <div
       css={css`
@@ -23,15 +14,11 @@ const NowForm: FC<NowFormProps> = ({
       <input
         css={css`
           border: medium solid black;
-          border-radius: 1em;
+          border-radius: 0.5rem;
+          padding: 0.5rem;
           resize: none;
         `}
-        cols={cols}
-        rows={rows}
-        autoFocus={autoFocus}
-        type={type}
-        placeholder={placeholder}
-        {...register(name, opts)}
+        {...props}
       />
     </div>
   )

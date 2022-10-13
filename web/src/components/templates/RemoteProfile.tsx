@@ -1,7 +1,7 @@
 import { FC } from "react"
 import useSWR from "swr"
 
-import { Profile } from "@kcctdensan/oonow-libs/next"
+import { Profile, CommonLayout } from "@kcctdensan/oonow-libs/next"
 import fetcher from "libs/fetcher"
 
 type RemoteProfileProps = {
@@ -12,7 +12,9 @@ const RemoteProfile: FC<RemoteProfileProps> = ({ screen }) => {
   const { data } = useSWR(`/api/users/profile/${screen}`, fetcher)
 
   return (
-    <Profile user={data} />
+    <CommonLayout>
+      <Profile user={data} />
+    </CommonLayout>
   )
 }
 

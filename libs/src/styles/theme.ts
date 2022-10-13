@@ -1,9 +1,11 @@
 export const color = {
   white:      "#fff",
   lightGray:  "#aaa",
+  heavyWhite: "#dcddde",
   gray:       "#888",
   darkGray:   "#444",
   dark:       "#222",
+  heavyDark:  "#36393f",
   black:      "#000",
 }
 
@@ -11,6 +13,7 @@ export const border = {
   gokuboso: "1px",
   hosoi: "0.2rem",
   futoi: "0.5rem",
+  totemohosoi: "0.1rem",
 }
 
 export const round = {
@@ -28,8 +31,10 @@ export type Theme = {
 
   bg:       Color[keyof Color]
   bgInv:    Color[keyof Color]
+  bgDim:    Color[keyof Color]
   fg:       Color[keyof Color]
   fgInv:    Color[keyof Color]
+  fgDim:    Color[keyof Color]
 }
 
 const common = { color, border, round }
@@ -38,14 +43,17 @@ export const theme: Theme = {
   ...common,
   bg: color.white,
   bgInv: color.dark,
+  bgDim: color.heavyDark,
   fg: color.black,
   fgInv: color.white,
+  fgDim: color.heavyWhite,
 }
 
 export const darkTheme: Theme = {
   ...common,
   bg: color.dark,
   bgInv: color.white,
+  bgDim: color.white,
   fg: color.white,
   fgInv: color.black,
 }

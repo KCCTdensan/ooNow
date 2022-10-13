@@ -1,14 +1,13 @@
 import { css } from "@emotion/react"
 import React from "react"
 
-import Header from "components/organisms/Header"
-import Footer from "components/organisms/Footer"
+import CommonLayout from "components/layouts/CommonLayout"
 import TimeLine from "components/organisms/TimeLine"
 
 const Home: React.FC = () => {
   return (
     <>
-      <Header />
+      <CommonLayout>
       <div css={css`
         width: 100%;
         max-width: 800px;
@@ -45,7 +44,7 @@ const Home: React.FC = () => {
           <TimeLine />
         </div>
         </div>
-      <Footer />
+      </CommonLayout>
     </>
   )
 }

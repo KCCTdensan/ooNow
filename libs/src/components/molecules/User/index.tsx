@@ -8,6 +8,7 @@ type UserProps = {
   to?: string
 }
 
+// 主にFF一覧とかそういうとこで表示される予定のやつ
 const User: FC<UserProps> = ({
   user: { screen, nick, iconUrl, isPublic, created, friends, followers },
   to,
@@ -28,7 +29,10 @@ const User: FC<UserProps> = ({
         `}>
         <IconLink to={to} iconUrl={iconUrl} />
       </div>
-      <div>
+      <div
+        css={css`
+          color: ${theme.fg};
+        `}>
         <strong>
           {nick} @{screen}
         </strong>

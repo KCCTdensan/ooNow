@@ -1,20 +1,20 @@
-import React from "react";
+import React from "react"
 import { css } from "@emotion/react"
 import UIButton from "components/atoms/UIButton"
 
 const CompanyForm = () => {
-    return (
-        <>
-        <p>ユーザーに送信する広告をアップロードしてください</p>
-        <form>
+  return (
+    <>
+      <p>ユーザーに送信する広告をアップロードしてください</p>
+      <form>
         <label
-            css={css`
+          css={css`
                     padding: 10px 40px;
                     color: #ffffff;
                     background-color: #384878;
                     cursor: pointer;
                 `}>
-            <input
+          <input
             css={css`
                         display: none;
                     `}
@@ -22,162 +22,162 @@ const CompanyForm = () => {
             id='ad'
             name='ad'
             accept='sample.png'
-            />
-            ファイルを選択
+          />
+          ファイルを選択
         </label>
-        </form>
-        <p>取得したいユーザー情報を指定してください</p>
-        <form>
+      </form>
+      <p>取得したいユーザー情報を指定してください</p>
+      <form>
         <p>年齢</p>
         <label
-            css={css`
+          css={css`
                     cursor: pointer;
                 `}>
-            <input type='radio' name='age' />
-            10-19
+          <input type='radio' name='age' />
+          10-19
         </label>
         <label
-            css={css`
+          css={css`
                     cursor: pointer;
                 `}>
-            <input type='radio' name='age' checked />
-            20-29
+          <input type='radio' name='age' checked />
+          20-29
         </label>
         <label
-            css={css`
+          css={css`
                     cursor: pointer;
                 `}>
-            <input type='radio' name='age' />
-            30-39
+          <input type='radio' name='age' />
+          30-39
         </label>
         <label
-            css={css`
+          css={css`
                     cursor: pointer;
                 `}>
-            <input type='radio' name='age' />
-            40-49
+          <input type='radio' name='age' />
+          40-49
         </label>
         <label
-            css={css`
+          css={css`
                     cursor: pointer;
                 `}>
-            <input type='radio' name='age' />
-            50-59
+          <input type='radio' name='age' />
+          50-59
         </label>
         <label
-            css={css`
+          css={css`
                     cursor: pointer;
                 `}>
-            <input type='radio' name='age' />
-            60-69
+          <input type='radio' name='age' />
+          60-69
         </label>
         <label
-            css={css`
+          css={css`
                     cursor: pointer;
                 `}>
-            <input type='radio' name='age' />
-            70-79
+          <input type='radio' name='age' />
+          70-79
         </label>
         <label
-            css={css`
+          css={css`
                     cursor: pointer;
                 `}>
-            <input type='radio' name='age' />
-            80-89
+          <input type='radio' name='age' />
+          80-89
         </label>
         <label
-            css={css`
+          css={css`
                     cursor: pointer;
                 `}>
-            <input type='radio' name='age' />
-            90-99
+          <input type='radio' name='age' />
+          90-99
         </label>
         <label
-            css={css`
+          css={css`
                     cursor: pointer;
                 `}>
-            <input type='radio' name='age' />
-            100-109
+          <input type='radio' name='age' />
+          100-109
         </label>
-        </form>
+      </form>
 
-        <form>
+      <form>
         <p>話題</p>
 
         <label
-            css={css`
+          css={css`
                     cursor: pointer;
                 `}>
-            <input type='radio' name='trend' />
-            ゲーム
+          <input type='radio' name='trend' />
+          ゲーム
         </label>
 
         <label
-            css={css`
+          css={css`
                     cursor: pointer;
                 `}>
-            <input type='radio' name='trend' />
-            アニメ
+          <input type='radio' name='trend' />
+          アニメ
         </label>
 
         <label
-            css={css`
+          css={css`
                     cursor: pointer;
                 `}>
-            <input type='radio' name='trend' />
-            勉強
+          <input type='radio' name='trend' />
+          勉強
         </label>
 
         <label
-            css={css`
+          css={css`
                     cursor: pointer;
                 `}>
-            <input type='radio' name='trend' />
-            仕事
+          <input type='radio' name='trend' />
+          仕事
         </label>
 
         <label
-            css={css`
+          css={css`
                     cursor: pointer;
                 `}>
-            <input type='radio' name='trend' />
-            作業
+          <input type='radio' name='trend' />
+          作業
         </label>
 
         <label
-            css={css`
+          css={css`
                     cursor: pointer;
                 `}>
-            <input type='radio' name='trend' />
-            旅行
+          <input type='radio' name='trend' />
+          旅行
         </label>
 
         <label
-            css={css`
+          css={css`
                     cursor: pointer;
                 `}>
-            <input type='radio' name='trend' />
-            アウトドア
+          <input type='radio' name='trend' />
+          アウトドア
         </label>
 
         <label
-            css={css`
+          css={css`
                     cursor: pointer;
                 `}>
-            <input type='radio' name='trend' checked />
-            その他
+          <input type='radio' name='trend' checked />
+          その他
         </label>
-        <br/>
-        <div css={css`
+        <br />
+        <div
+          css={css`
           margin-top: 3em;
           text-align: center;
           `}>
-          <UIButton text='送信' type='submit' strong/>
+          <UIButton text='送信' type='submit' strong />
         </div>
-        
-        </form>
-        </>
-    )
+      </form>
+    </>
+  )
 }
 
 export default CompanyForm

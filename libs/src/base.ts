@@ -2,7 +2,9 @@ export * from "libs/atoms"
 export { theme, darkTheme } from "styles/theme"
 
 // Layouts
+export { default as CommonLayout } from "components/layouts/CommonLayout"
 export { default as SingleBoxFrame } from "components/layouts/SingleBoxFrame"
+export { default as SingleBoxLayout } from "components/layouts/SingleBoxLayout"
 
 // Atoms
 export { default as FormError } from "components/atoms/FormError"

@@ -2,13 +2,12 @@ import React from "react"
 import { css } from "@emotion/react"
 
 import User from "components/molecules/User"
-import Header from "components/organisms/Header"
-import Footer from "components/organisms/Footer"
+import CommonLayout from "components/layouts/CommonLayout"
 
 const ViewUsers = () => {
   return (
     <>
-      <Header></Header>
+      <CommonLayout>
 
       <h3
         css={css`
@@ -83,7 +82,7 @@ const ViewUsers = () => {
           </div>
         </div>
       </div>
-      <Footer></Footer>
+      </CommonLayout>
     </>
   )
 }

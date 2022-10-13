@@ -7,11 +7,7 @@ const ServiceInfo = () => {
   const { data: ucnt } = useSWR("/api/users/count", fetcher)
 
   return (
-    <StatusBanner
-      vals={[
-        { text: "現在の登録ユーザー数", val: ucnt?.value },
-      ]}
-    />
+    <StatusBanner vals={[{ text: "現在の登録ユーザー数", val: ucnt?.value }]} />
   )
 }
 
