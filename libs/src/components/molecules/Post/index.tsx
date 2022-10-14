@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { css } from "@emotion/react"
+import { css, useTheme } from "@emotion/react"
 
 import { date2str } from "libs/fmt"
 
@@ -17,10 +17,13 @@ type PostProps = {
 }
 
 const Post: FC<PostProps> = ({ post: { user, time, content } }) => {
+  const theme = useTheme()
+
   return (
     <div
       css={css`
         display: flex;
+        padding: 1rem;
       `}>
       <User user={user} />
       <div
@@ -32,6 +35,7 @@ const Post: FC<PostProps> = ({ post: { user, time, content } }) => {
       </div>
       <span
         css={css`
+          color: ${theme.fgDim};
         `}>
         {date2str(time)}
       </span>

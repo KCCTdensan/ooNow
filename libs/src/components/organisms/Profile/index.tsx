@@ -3,7 +3,7 @@ import { css } from "@emotion/react"
 
 import UIButton from "components/atoms/UIButton"
 import Icon from "components/atoms/Icon"
-import TimeLine from "components/organisms/TimeLine"
+import TimeLine from "components/molecules/TimeLine"
 
 const user = {
   screen: "huhyuuuuu",
@@ -15,6 +15,7 @@ const user = {
   followers: 100,
 }
 
+// MyProfile写して
 const Profile = () => {
   return (
     <div

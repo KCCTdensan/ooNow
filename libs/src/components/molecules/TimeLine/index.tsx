@@ -3,6 +3,7 @@ import { css } from "@emotion/react"
 
 import Icon from "components/atoms/Icon"
 import UIButton from "components/atoms/UIButton"
+import Post from "components/molecules/Post"
 
 type Post = any
 
@@ -11,42 +12,17 @@ type TimeLineProps = {
 }
 
 const TimeLine: FC<TimeLineProps> = ({ posts }) => {
-  console.log(posts)
   return (
     <div
       css={css`
-        margin-top: 10px;
-        margin-bottom: 10px;
-        border: solid 2px black;
+        display: flex;
+        margin: 10px 0;
+        padding: 10px;
+        flex-direction: column;
       `}>
-      <div
-        css={css`
-          display: flex;
-          padding: 10px;
-        `}>
-        <div
-          css={css`
-              margin-left: 10px;
-            `}>
-          <div
-            css={css`
-                display: flex;
-              `}>
-            <div
-              css={css`
-                  
-                `}>
-              <UIButton text='同じく' />
-            </div>
-            <div
-              css={css`
-                  margin-left: 20px;
-                `}>
-              <UIButton text='がんば！' />
-            </div>
-          </div>
-        </div>
-      </div>
+      {posts.map((post, i) => (
+        <Post post={post} key={i} />
+      ))}
     </div>
   )
 }

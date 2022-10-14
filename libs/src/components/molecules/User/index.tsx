@@ -1,17 +1,15 @@
 import { FC } from "react"
 import { css, useTheme } from "@emotion/react"
 
-import IconLink from "components/molecules/IconLink"
+import Icon from "components/atoms/Icon"
 
-type UserProps = {
+export type UserProps = {
   user: UserProfile
-  to?: string
 }
 
 // 主にFF一覧とかそういうとこで表示される予定のやつ
 const User: FC<UserProps> = ({
   user: { screen, nick, iconUrl, isPublic, created, friends, followers },
-  to,
 }) => {
   const theme = useTheme()
 
@@ -27,7 +25,7 @@ const User: FC<UserProps> = ({
           height: 3rem;
           margin-right: 0.7rem;
         `}>
-        <IconLink to={to} iconUrl={iconUrl} />
+        <Icon iconUrl={iconUrl} />
       </div>
       <div
         css={css`

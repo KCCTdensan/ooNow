@@ -12,7 +12,9 @@ const CommonFrame: FC<CommonFrameProps> = ({ children }) => {
         max-width: 800px;
         margin-right: auto;
         margin-left: auto;
-      `}></div>
+      `}>
+      {children}
+    </div>
   )
 }
 
