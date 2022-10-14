@@ -7,11 +7,11 @@ import Post from "components/molecules/Post"
 
 type Post = any
 
-type TimeLineProps = {
+type PostListProps = {
   posts: Post[]
 }
 
-const TimeLine: FC<TimeLineProps> = ({ posts }) => {
+const PostList: FC<PostListProps> = ({ posts }) => {
   return (
     <div
       css={css`
@@ -27,4 +27,4 @@ const TimeLine: FC<TimeLineProps> = ({ posts }) => {
   )
 }
 
-export default TimeLine
+export default PostList

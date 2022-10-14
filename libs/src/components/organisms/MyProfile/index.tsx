@@ -2,7 +2,7 @@ import { FC } from "react"
 import { css } from "@emotion/react"
 
 import MyProfileHeader from "components/molecules/MyProfileHeader"
-import TimeLine from "components/molecules/TimeLine"
+import PostList from "components/molecules/PostList"
 
 const MyProfile: FC = () => {
   // get posts
@@ -25,7 +25,7 @@ const MyProfile: FC = () => {
     <>
       <MyProfileHeader />
       <div css={css`margin: 4rem 0;`}>
-        <TimeLine posts={posts} />
+        <PostList posts={posts} />
       </div>
     </>
   )

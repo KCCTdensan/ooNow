@@ -1,8 +1,8 @@
-import TimeLine from "."
+import PostList from "."
 
 export default {
-  title: "Molecules / TimeLine",
-  component: TimeLine,
+  title: "Molecules / PostList",
+  component: PostList,
 }
 
 const user = {
@@ -22,5 +22,5 @@ const posts = [
 ]
 
 export const Story = () => {
-  return <TimeLine posts={posts} />
+  return <PostList posts={posts} />
 }

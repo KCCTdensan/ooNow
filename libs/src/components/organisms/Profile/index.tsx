@@ -3,7 +3,7 @@ import { css } from "@emotion/react"
 
 import UIButton from "components/atoms/UIButton"
 import Icon from "components/atoms/Icon"
-import TimeLine from "components/molecules/TimeLine"
+import PostList from "components/molecules/PostList"
 
 const user = {
   screen: "huhyuuuuu",
@@ -51,7 +51,7 @@ const Profile = () => {
             margin-top: 100px;
             margin-bottom: 40px;
             `}>
-        <TimeLine />
+        <PostList />
       </div>
     </div>
   )
