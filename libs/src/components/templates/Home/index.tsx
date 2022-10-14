@@ -2,7 +2,7 @@ import { css } from "@emotion/react"
 import React from "react"
 
 import CommonLayout from "components/layouts/CommonLayout"
-import TimeLine from "components/organisms/TimeLine"
+import TimeLine from "components/molecules/TimeLine"
 
 const Home: React.FC = () => {
   return (

@@ -1,4 +1,5 @@
 import { FC, ReactNode } from "react"
+import { css } from "@emotion/react";
 
 type CommonFrameProps = {
   children: ReactNode
