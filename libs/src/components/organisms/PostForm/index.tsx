@@ -2,6 +2,7 @@ import { FC } from "react"
 import { css } from "@emotion/react"
 import { useForm, SubmitHandler } from "react-hook-form"
 
+import FloatFrame from "components/layouts/FloatFrame"
 import UIButton from "components/atoms/UIButton"
 import NowButton from "components/molecules/NowButton"
 import Choice from "components/organisms/Choice"
@@ -23,6 +24,10 @@ const PostForm: FC<PostFormProps> = ({
   onSubmit = () => {},
 }) => {
   return (
+    <FloatFrame>
+      hello!
+    </FloatFrame>
+    /*
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div
@@ -61,6 +66,7 @@ const PostForm: FC<PostFormProps> = ({
         </div>
       </form>
     </>
+    */
   )
 }
 
