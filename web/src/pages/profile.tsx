@@ -1,5 +1,4 @@
-// import MyProfile from "components/templates/MyProfile"
-import { MyProfile } from "@kcctdensan/oonow-libs/next"
+import MyProfile from "components/templates/MyProfile"
 
 export default function MyProfileScreen() {
   return (

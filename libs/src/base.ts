@@ -23,13 +23,16 @@ export { default as FormErrorSuggest } from "components/molecules/FormErrorSugge
 export { default as IconLink } from "components/molecules/IconLink"
 export { default as InputForm } from "components/molecules/InputForm"
 export { default as Menu } from "components/molecules/Menu"
+export { default as MyProfileHeader } from "components/molecules/MyProfileHeader"
 export { default as NowButton } from "components/molecules/NowButton"
 export { default as NowForm } from "components/molecules/NowForm"
 export { default as NowShow } from "components/molecules/NowShow"
 export { default as Post } from "components/molecules/Post"
-export { default as TimeLine } from "components/molecules/TimeLine"
+export { default as PostList } from "components/molecules/PostList"
+export { default as ProfileHeader } from "components/molecules/ProfileHeader"
 export { default as User } from "components/molecules/User"
 export { default as UserData } from "components/molecules/UserData"
+export { default as UserList } from "components/molecules/UserLink"
 
 // Organisms
 export { default as CompanyForm } from "components/organisms/CompanyForm"
