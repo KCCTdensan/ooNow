@@ -8,15 +8,14 @@ const ViewUsers = () => {
   return (
     <>
       <CommonLayout>
-
-      <h3
-        css={css`
+        <h3
+          css={css`
                 text-align: center;
             `}>
-        Followers
-      </h3>
-      <div
-        css={css`
+          Followers
+        </h3>
+        <div
+          css={css`
             margin: 2em 0;
             margin-left: auto;
             margin-right: auto;
@@ -41,47 +40,47 @@ const ViewUsers = () => {
               right: 10px;
             }
           `}>
-        <div
-          css={css`
+          <div
+            css={css`
                 margin-right: 400px;
             `}>
-          <div
-            css={css`
+            <div
+              css={css`
                 display: flex;
                 justify-content: center;
             `}>
-            <User></User>
-          </div>
-          <div
-            css={css`
+              <User></User>
+            </div>
+            <div
+              css={css`
                 display: flex;
                 justify-content: center;
             `}>
-            <User></User>
-          </div>
-          <div
-            css={css`
+              <User></User>
+            </div>
+            <div
+              css={css`
                 display: flex;
                 justify-content: center;
             `}>
-            <User></User>
-          </div>
-          <div
-            css={css`
+              <User></User>
+            </div>
+            <div
+              css={css`
                 display: flex;
                 justify-content: center;
             `}>
-            <User></User>
-          </div>
-          <div
-            css={css`
+              <User></User>
+            </div>
+            <div
+              css={css`
                 display: flex;
                 justify-content: center;
             `}>
-            <User></User>
+              <User></User>
+            </div>
           </div>
         </div>
-      </div>
       </CommonLayout>
     </>
   )

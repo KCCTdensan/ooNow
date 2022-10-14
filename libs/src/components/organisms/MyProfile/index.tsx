@@ -23,7 +23,7 @@ const MyProfile: FC = () => {
 
   return (
     <>
-      <MyProfileHeader />
+      <MyProfileHeader user={user} />
       <div css={css`margin: 4rem 0;`}>
         <PostList posts={posts} />
       </div>

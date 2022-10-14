@@ -11,7 +11,7 @@ type PostListProps = {
   posts: Post[]
 }
 
-const PostList: FC<PostListProps> = ({ posts }) => {
+const PostList: FC<PostListProps> = ({ posts = [] }) => {
   return (
     <div
       css={css`

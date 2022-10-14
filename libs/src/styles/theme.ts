@@ -35,6 +35,8 @@ export type Theme = {
   fg:       Color[keyof Color]
   fgInv:    Color[keyof Color]
   fgDim:    Color[keyof Color]
+  fgSub:    Color[keyof Color]
+  fgPsc:    Color[keyof Color]
 }
 
 const common = { color, border, round }
@@ -47,6 +49,8 @@ export const theme: Theme = {
   fg: color.black,
   fgInv: color.white,
   fgDim: color.heavyWhite,
+  fgSub: color.darkGray,
+  fgPsc: color.heavyWhite,
 }
 
 export const darkTheme: Theme = {
@@ -56,4 +60,6 @@ export const darkTheme: Theme = {
   bgDim: color.white,
   fg: color.white,
   fgInv: color.black,
+  fgSub: color.lightGray,
+  fgPsc: color.darkGray,
 }

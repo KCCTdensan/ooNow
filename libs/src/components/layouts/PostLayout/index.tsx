@@ -5,11 +5,7 @@ type PostLayoutProps = {
 }
 
 const PostLayout: FC<PostLayoutProps> = ({ children }) => {
-  return (
-    <>
-      {children}
-    </>
-  )
+  return <>{children}</>
 }
 
 export default PostLayout

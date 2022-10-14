@@ -15,8 +15,9 @@ const UIButton: FC<UIButtonProps> = ({ text, handler, active, submit }) => {
     <button
       type={submit ? "submit" : "button"}
       css={css`
+      height: 2.5rem;
+      margin: 0 0.5rem;
       padding: 0.4rem 1.2rem;
-      font-size: 1rem;
       background: ${active ? theme.bgDim : theme.fgDim};
       color: ${active ? theme.fgDim : theme.fg};
       border: ${theme.border.totemohosoi} solid ${
@@ -28,7 +29,7 @@ const UIButton: FC<UIButtonProps> = ({ text, handler, active, submit }) => {
       &:hover {
         background: #ffb35c;
         border: ${theme.border.totemohosoi} solid #ff9924;
-      transition: all .4s ease;
+        transition: all 0.4s ease;
       };
       `}
       onClick={handler}>

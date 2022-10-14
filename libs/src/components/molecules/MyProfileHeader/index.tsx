@@ -1,29 +1,47 @@
-import { FC, useState } from "react"
-import { css } from "@emotion/react"
+import { FC } from "react"
+import { css, useTheme } from "@emotion/react"
 
 import Icon from "components/atoms/Icon"
 import UIButton from "components/atoms/UIButton"
+import ButtonLink from "components/molecules/ButtonLink"
 
-type MyProfileHeaderProps = {}
+type User = {
+  screen: string
+  nick: string
+  iconUrl: string
+  isPublic: boolean
+  created: Date
+  friends: number
+  followers: number
+}
+type MyProfileHeaderProps = {
+  user: User //
+}
 
-const MyProfileHeader: FC<MyProfileHeaderProps> = () => {
-  const [text, setText] = useState("")
-  const [addText, setAddText] = useState("")
-  const [flag, setFlag] = useState(false)
+/*
+const user = {
+    screen: "huhyuuuuu",
+    nick: "俺",
+    iconUrl: "https://www.dyama.net/icon.png",
+    isPublic: false,
+    created: new Date(Date.now() - 1000),
+    friends: 100,
+    followers: 100,
+}
+*/
 
-  const onClickAddText = () => {
-    setAddText(text)
-    setText("")
-    setFlag(false)
-  }
-  const onClickSetFlag = () => {
-    setFlag(true)
-  }
+const MyProfileHeader: FC<MyProfileHeaderProps> = ({ user }) => {
+  const theme = useTheme()
 
   return (
     <>
-      <div css={css`display: flex;`}>
-        <Icon iconUrl='../../../../images/sample.png' />
+      <div
+        css={css`
+      display: flex;
+      width: 75px;
+      height: 75px;
+      `}>
+        <Icon iconUrl={user.iconUrl} />
         <div
           css={css`
             display: flex;
@@ -37,29 +55,38 @@ const MyProfileHeader: FC<MyProfileHeaderProps> = () => {
       <div
         css={css`
                 font-weight: bold;
+                color: ${theme.fg} ;
+                height: 10px;
             `}>
-        UserName
+        {user.nick + " " + "@" + user.screen + {user.isPublic ? 1 : 0}}
       </div>
-      <div>
-        <input
-          css={css`
-                display: ${flag ? "block" : "none"};
-            `}
-          value={text}
-          onChange={e => setText(e.target.value)}
-        />
+      <div
+        css={css`
+          display: flex;
+          width: 300px;
+          height: 25px;
+        `}>
         <p
           css={css`
-                display: ${flag ? "none" : "block"};
-            `}>
-          {addText}
+            color: ${theme.fgSub};
+            font-size: 0.8em;
+          `}>
+          {"友邦: " + user.friends + " " + "同盟: " + user.followers}
         </p>
-        <div
+      </div>
+      <div
+        css={css`
+          display: flex;
+          width: 500px;
+          height: 10px;
+        `}>
+        <p
           css={css`
-                display: ${flag ? "block" : "none"};
-            `}>
-          <UIButton text='編集完了' handler={onClickAddText} />
-        </div>
+            color: ${theme.fgPsc};
+            font-size: 0.6em;
+          `}>
+          {"作成日: " + user.created}
+        </p>
       </div>
     </>
   )

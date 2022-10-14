@@ -9,14 +9,14 @@ const MyProfiles = () => {
   return (
     <>
       <CommonLayout>
-      <div css={css`
+        <div
+          css={css`
         width: 100%;
         max-width: 800px;
         margin-right: auto;
-        margin-left: auto;`
-      }>
-        <MyProfile></MyProfile>
-      </div>
+        margin-left: auto;`}>
+          <MyProfile></MyProfile>
+        </div>
       </CommonLayout>
     </>
   )

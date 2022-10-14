@@ -7,7 +7,7 @@ const Snippet: React.FC = () => {
   return (
     <>
       <CommonLayout>
-      <SnippetOrganism/>
+        <SnippetOrganism />
       </CommonLayout>
     </>
   )

@@ -7,9 +7,7 @@ type UserLinkProps = UserProps & {
 }
 
 const UserLink: FC<UserLinkProps> = ({ user, to }) => {
-  const LinkRef = forwardRef(({ user }, ref) => (
-    <User ref={ref} user={user} />
-  ))
+  const LinkRef = forwardRef(({ user }, ref) => <User ref={ref} user={user} />)
 
   return (
     <Link to={to} noa>

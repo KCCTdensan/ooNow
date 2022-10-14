@@ -1,9 +1,7 @@
 // MyProfileHeader写してちょ
 
 const ProfileHeader = () => {
-  return (
-    <></>
-  )
+  return <></>
 }
 
 export default ProfileHeader

@@ -19,13 +19,8 @@ const User: FC<UserProps> = ({
         display: flex;
         align-items: center;
       `}>
-      <div
-        css={css`
-          width: 3rem;
-          height: 3rem;
-          margin-right: 0.7rem;
-        `}>
-        <Icon iconUrl={iconUrl} />
+      <div css={css`margin-right: 0.7rem;`}>
+        <Icon iconUrl={iconUrl} small />
       </div>
       <div
         css={css`

@@ -5,6 +5,7 @@ import { date2str } from "libs/fmt"
 
 // import type { User } from ""
 import User from "components/molecules/User"
+import ReactButton from "components/atoms/ReactButton"
 
 type Post = {
   user: User
@@ -31,7 +32,15 @@ const Post: FC<PostProps> = ({ post: { user, time, content } }) => {
           display: flex;
           flex-grow: 1;
         `}>
-        {/* Reactions */}
+        <div
+          css={css`
+              display: flex;
+              align-items: center;
+              margin: 0 1.2rem;
+              `}>
+          <ReactButton text={"がんば"} />
+          <ReactButton text={"同じく"} />
+        </div>
       </div>
       <span
         css={css`

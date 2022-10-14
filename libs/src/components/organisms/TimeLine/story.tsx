@@ -6,6 +6,6 @@ export default {
   component: TimeLine,
 }
 
-export const TimeLine = () => {
+export const TimeLines = () => {
   return <TimeLine />
 }

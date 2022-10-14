@@ -14,7 +14,6 @@ type UserProfile = {
   followers: number
 }
 
-
 export const userProfileState = atom<UserProfile | null>({
   key: "userProfile",
   default: null,

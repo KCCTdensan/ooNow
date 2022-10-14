@@ -2,20 +2,20 @@ import { css } from "@emotion/react"
 import React from "react"
 
 import CommonLayout from "components/layouts/CommonLayout"
-import TimeLine from "components/molecules/TimeLine"
+import TimeLine from "components/organisms/TimeLine"
 
 const Home: React.FC = () => {
   return (
     <>
       <CommonLayout>
-      <div css={css`
+        <div
+          css={css`
         width: 100%;
         max-width: 800px;
         margin-right: auto;
-        margin-left: auto;`
-      }>
-        <div
-          css={css`
+        margin-left: auto;`}>
+          <div
+            css={css`
               margin: 2em 0;
               margin-left: auto;
               margin-right: auto;
@@ -40,9 +40,8 @@ const Home: React.FC = () => {
                 right: 10px;
               }
             `}>
-          <TimeLine />
-          <TimeLine />
-        </div>
+            <TimeLine />
+          </div>
         </div>
       </CommonLayout>
     </>

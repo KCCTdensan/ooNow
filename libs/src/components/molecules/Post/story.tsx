@@ -18,7 +18,5 @@ const user = {
 const post = { user, time: new Date(), content: "ほげほげなう" }
 
 export const Story = () => {
-  return (
-    <Post post={post} />
-  )
+  return <Post post={post} />
 }

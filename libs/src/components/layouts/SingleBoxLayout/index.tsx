@@ -10,9 +10,7 @@ type SingleBoxLayoutProps = {
 const SingleBoxLayout: FC<SingleBoxLayoutProps> = ({ children }) => {
   return (
     <>
-      <SingleBoxFrame>
-        {children}
-      </SingleBoxFrame>
+      <SingleBoxFrame>{children}</SingleBoxFrame>
       <Footer />
     </>
   )
