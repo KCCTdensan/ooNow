@@ -58,7 +58,7 @@ const MyProfileHeader: FC<MyProfileHeaderProps> = ({ user }) => {
                 color: ${theme.fg} ;
                 height: 10px;
             `}>
-        {user.nick + " " + "@" + user.screen + {user.isPublic ? 1 : 0}}
+        {user.nick + " " + "@" + user.screen + (user.isPublic ? 1 : 0)}
       </div>
       <div
         css={css`

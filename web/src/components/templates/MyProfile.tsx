@@ -9,7 +9,6 @@ import {
 
 const MyProfile: FC = () => {
   const userProfile = useRecoilValue(userProfileState)
-  console.log(userProfile)
   // 無かったらsomething
 
   return (

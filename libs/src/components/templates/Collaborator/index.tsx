@@ -3,9 +3,9 @@ import { css } from "@emotion/react"
 
 import CommonLayout from "components/layouts/CommonLayout"
 import UserData from "components/molecules/UserData"
-import CompanyForm from "components/organisms/CompanyForm"
+import CollaboratorForm from "components/organisms/CompanyForm"
 
-const Company = () => {
+const Collaborator = () => {
   return (
     <>
       <CommonLayout>
@@ -16,11 +16,11 @@ const Company = () => {
           margin-right: auto;
           margin-left: auto;
           margin-bottom: 3em;`}>
-          <CompanyForm />
+          <CollaboratorForm />
         </div>
       </CommonLayout>
     </>
   )
 }
 
-export default Company
+export default Collaborator

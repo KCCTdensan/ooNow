@@ -1,4 +1,5 @@
 import { setCookie } from "nookies"
+import { cookieOpts } from "libs/cookies"
 
 export default async function login(req, res) {
   const { method, headers, body } = req
@@ -21,7 +22,7 @@ export default async function login(req, res) {
   }
 
   const { access_token } = await apiRes.json()
-  setCookie({ res }, "at", access_token, { httpOnly: true })
+  setCookie({ res }, "at", access_token, cookieOpts)
 
   const profRes = await fetch(urlProf, {
     headers: { Authorization: `Bearer ${access_token}` },

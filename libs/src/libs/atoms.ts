@@ -14,6 +14,12 @@ type UserProfile = {
   followers: number
 }
 
+export const loginState = atom<boolean>({
+  key: "loggedIn",
+  default: false,
+  effects: [persistAtom],
+})
+
 export const userProfileState = atom<UserProfile | null>({
   key: "userProfile",
   default: null,

@@ -1,6 +1,7 @@
 import useSWR from "swr"
 import fetcher from "libs/fetcher"
-import StatusBanner from "components/molecules/StatusBanner"
+
+import { StatusBanner } from "@kcctdensan/oonow-libs/next"
 
 // 登録画面とかに出すやつ
 const ServiceInfo = () => {
