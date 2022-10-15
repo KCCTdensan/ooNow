@@ -32,5 +32,7 @@ export class PostsController {
 
   @Post("create")
   async createPost(@Body() body: any) {
+    const post = await this.postService.create(body)
+    return post
   }
 }

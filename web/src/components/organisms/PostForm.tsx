@@ -1,5 +1,6 @@
 import { FC, useEffect, useState } from "react"
 import { css } from "@emotion/react"
+import { useRecoilValue } from "recoil"
 import { useForm, SubmitHandler } from "react-hook-form"
 
 import {
@@ -10,6 +11,7 @@ import {
   FormError,
   FormErrorSuggest,
   NowForm,
+  userProfileState,
 } from "@kcctdensan/oonow-libs/next"
 
 export type PostFormInputs = {
@@ -34,6 +36,7 @@ const PostForm: FC<PostFormProps> = ({
 
   // こ↑こ↓わからん
   const [postContent, setPostContent] = useState(postInit)
+  const user = useRecoilValue(userProfileState)
   const {
     register,
     handleSubmit,
@@ -44,13 +47,24 @@ const PostForm: FC<PostFormProps> = ({
   } = useForm<PostFormInputs>()
 
   const onSubmit = async ({ content, category }) => {
-    const res = await fetch("/api/bff/post", {
+
+    const data = {
+      content: content,
+      date: new Date(),
+      public: Boolean,
+      authorId: user?.id,
+      category: category,
+    }
+
+    console.log(data)
+
+    const res = await fetch("/api/posts/create", {
       method: "POST",
-      body: JSON.stringify({
-        nowContent: content,
-        nowCategory: category,
-      }),
+      body: JSON.stringify(data),
     })
+
+    console.log(res.status)
+    console.log(await res.json())
 
     if (!res.ok) {
       if (res.status === 400) {
@@ -93,7 +107,6 @@ const PostForm: FC<PostFormProps> = ({
           cols='20'
           rows='5'
           autoFocus='true'
-          type='content'
           placeholder='いましていること'
           register={register}
         />

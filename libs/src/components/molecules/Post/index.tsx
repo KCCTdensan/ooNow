@@ -25,6 +25,9 @@ const Post: FC<PostProps> = ({ post: { user, time, content } }) => {
       css={css`
         display: flex;
         padding: 1rem;
+        margin: 0.3rem;
+        background: ${theme.bgPle};
+        border-radius: ${theme.round.normal};
       `}>
       <User user={user} />
       <div
@@ -42,14 +45,14 @@ const Post: FC<PostProps> = ({ post: { user, time, content } }) => {
           <ReactButton text={"同じく"} />
         </div>
       </div>
-      <span
-        css={css`
-          color: ${theme.fgDim};
-        `}>
-        {date2str(time)}
-      </span>
+        <span
+            css={css`
+            color: ${theme.fgDim};
+            `}>
+            {date2str(time)}
+        </span>
     </div>
-  )
+    )
 }
 
 export default Post

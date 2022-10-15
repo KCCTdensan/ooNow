@@ -1,12 +1,14 @@
 export const color = {
-  white:      "#fff",
-  lightGray:  "#aaa",
-  heavyWhite: "#dcddde",
-  gray:       "#888",
-  darkGray:   "#444",
-  dark:       "#222",
-  heavyDark:  "#36393f",
-  black:      "#000",
+  white:          "#fff",
+  lightGray:      "#aaa",
+  heavyWhite:     "#dcddde",
+  gray:           "#888",
+  darkGray:       "#444",
+  dark:           "#222",
+  heavyDark:      "#36393f",
+  black:          "#000",
+  linen:          "#faf0e6",
+  darkSlateGray:  "#3f4f5f",
 }
 
 export const border = {
@@ -32,6 +34,7 @@ export type Theme = {
   bg:       Color[keyof Color]
   bgInv:    Color[keyof Color]
   bgDim:    Color[keyof Color]
+  bgPle:    Color[keyof Color]
   fg:       Color[keyof Color]
   fgInv:    Color[keyof Color]
   fgDim:    Color[keyof Color]
@@ -46,6 +49,7 @@ export const theme: Theme = {
   bg: color.white,
   bgInv: color.dark,
   bgDim: color.heavyDark,
+  bgPle: color.linen,
   fg: color.black,
   fgInv: color.white,
   fgDim: color.heavyWhite,
@@ -58,8 +62,9 @@ export const darkTheme: Theme = {
   bg: color.dark,
   bgInv: color.white,
   bgDim: color.white,
-  fg: color.white,
-  fgInv: color.black,
-  fgSub: color.lightGray,
-  fgPsc: color.darkGray,
+    bgPle: color.darkSlateGray,
+    fg: color.white,
+    fgInv: color.black,
+    fgSub: color.lightGray,
+    fgPsc: color.darkGray,
 }

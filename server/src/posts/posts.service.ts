@@ -2,6 +2,16 @@ import { Injectable } from "@nestjs/common"
 import { Post, Prisma } from "@prisma/client"
 import { PrismaService } from "prisma/prisma.service"
 
+/* post
+model Post {
+id       String   @id @default(cuid())
+content  String
+date     DateTime
+public   Boolean
+author   User
+}
+*/
+
 @Injectable()
 export class PostsService {
   constructor(private readonly prisma: PrismaService) {}
