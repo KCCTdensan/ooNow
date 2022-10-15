@@ -1,7 +1,7 @@
 import { FC } from "react"
 import { css } from "@emotion/react"
 
-import PostList from "components/molecules/PostList"
+import PostList from "components2/molecules/PostList"
 
 const MyProfile: FC = () => {
   // get posts

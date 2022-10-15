@@ -1,8 +1,8 @@
 import { FC, ReactNode } from "react"
 
-import CommonFrame from "components/layouts/CommonFrame"
-import Header from "components/organisms/Header"
-import Footer from "components/organisms/Footer"
+import CommonFrame from "components2/layouts/CommonFrame"
+import Header from "components2/organisms/Header"
+import Footer from "components2/organisms/Footer"
 
 type CommonLayoutProps = {
   children: ReactNode

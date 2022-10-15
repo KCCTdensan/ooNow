@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { css } from "@emotion/react"
-import Icon from "components/atoms/Icon"
-import UIButton from "components/atoms/UIButton"
+import Icon from "components2/atoms/Icon"
+import UIButton from "components2/atoms/UIButton"
 
 const SnippetOrganism = () => {
   const [text, setText] = useState("")

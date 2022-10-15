@@ -1,6 +1,6 @@
 import { FC, forwardRef } from "react"
 
-import User, { UserProps } from "components/molecules/User"
+import User, { UserProps } from "components2/molecules/User"
 
 type UserLinkProps = UserProps & {
   to: string

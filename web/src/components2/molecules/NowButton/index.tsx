@@ -1,7 +1,7 @@
 import { FC } from "react"
 import { css } from "@emotion/react"
 
-import UIButton, { UIButtonProps } from "components/atoms/UIButton"
+import UIButton, { UIButtonProps } from "components2/atoms/UIButton"
 
 const NowButton: FC<UIButtonProps> = ({ text }) => {
   return (

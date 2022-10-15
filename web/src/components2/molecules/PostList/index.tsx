@@ -1,9 +1,9 @@
 import { FC } from "react"
 import { css } from "@emotion/react"
 
-import Icon from "components/atoms/Icon"
-import UIButton from "components/atoms/UIButton"
-import Post from "components/molecules/Post"
+import Icon from "components2/atoms/Icon"
+import UIButton from "components2/atoms/UIButton"
+import Post from "components2/molecules/Post"
 
 type Post = any
 

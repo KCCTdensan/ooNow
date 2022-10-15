@@ -1,10 +1,10 @@
 import { useState } from "react"
 import { css } from "@emotion/react"
 
-import Icon from "components/atoms/Icon"
-import UIButton from "components/atoms/UIButton"
-import CommonLayout from "components/layouts/CommonLayout"
-import MyProfile from "components/organisms/MyProfile"
+import Icon from "components2/atoms/Icon"
+import UIButton from "components2/atoms/UIButton"
+import CommonLayout from "components2/layouts/CommonLayout"
+import MyProfile from "components2/organisms/MyProfile"
 const MyProfiles = () => {
   return (
     <>

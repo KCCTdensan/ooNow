@@ -1,8 +1,8 @@
 import { FC } from "react"
 import { css } from "@emotion/react"
 
-import ButtonLink from "components/molecules/ButtonLink"
-import Icon from "components/atoms/Icon"
+import ButtonLink from "components2/molecules/ButtonLink"
+import Icon from "components2/atoms/Icon"
 
 const Footer: FC = () => {
   return (

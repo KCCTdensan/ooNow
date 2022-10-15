@@ -1,7 +1,7 @@
 import React from "react"
 
-import LoginForm from "components/organisms/LoginForm"
-import Footer from "components/organisms/Footer"
+import LoginForm from "components2/organisms/LoginForm"
+import Footer from "components2/organisms/Footer"
 
 const Login = () => {
   return (

@@ -1,8 +1,8 @@
 import { FC } from "react"
 import { css } from "@emotion/react"
 
-import FormError from "components/atoms/FormError"
-import ButtonLink from "components/molecules/ButtonLink"
+import FormError from "components2/atoms/FormError"
+import ButtonLink from "components2/molecules/ButtonLink"
 
 type FormErrorSuggestProps = {
   msg: string

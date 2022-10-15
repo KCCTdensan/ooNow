@@ -1,7 +1,7 @@
 import { FC } from "react"
 import { css, useTheme } from "@emotion/react"
 
-import Icon from "components/atoms/Icon"
+import Icon from "components2/atoms/Icon"
 
 export type UserProps = {
   user: UserProfile

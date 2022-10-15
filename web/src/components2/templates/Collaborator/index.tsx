@@ -1,9 +1,9 @@
 import React from "react"
 import { css } from "@emotion/react"
 
-import CommonLayout from "components/layouts/CommonLayout"
-import UserData from "components/molecules/UserData"
-import CollaboratorForm from "components/organisms/CompanyForm"
+import CommonLayout from "components2/layouts/CommonLayout"
+import UserData from "components2/molecules/UserData"
+import CollaboratorForm from "components2/organisms/CompanyForm"
 
 const Collaborator = () => {
   return (

@@ -2,10 +2,10 @@ import { FC } from "react"
 import { css } from "@emotion/react"
 import { useForm, SubmitHandler } from "react-hook-form"
 
-import FloatFrame from "components/layouts/FloatFrame"
-import UIButton from "components/atoms/UIButton"
-import NowButton from "components/molecules/NowButton"
-import Choice from "components/organisms/Choice"
+import FloatFrame from "components2/layouts/FloatFrame"
+import UIButton from "components2/atoms/UIButton"
+import NowButton from "components2/molecules/NowButton"
+import Choice from "components2/organisms/Choice"
 
 export type PostFormInputs = {
   category: string

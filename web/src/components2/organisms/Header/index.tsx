@@ -1,9 +1,9 @@
 import { FC } from "react"
 import { css } from "@emotion/react"
 
-import Link from "components/atoms/Link"
-import Logo from "components/atoms/Logo"
-import Menu from "components/molecules/Menu"
+import Link from "components2/atoms/Link"
+import Logo from "components2/atoms/Logo"
+import Menu from "components2/molecules/Menu"
 
 type User = any
 type HeaderProps = {

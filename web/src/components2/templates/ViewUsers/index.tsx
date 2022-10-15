@@ -1,8 +1,8 @@
 import React from "react"
 import { css } from "@emotion/react"
 
-import User from "components/molecules/User"
-import CommonLayout from "components/layouts/CommonLayout"
+import User from "components2/molecules/User"
+import CommonLayout from "components2/layouts/CommonLayout"
 
 const ViewUsers = () => {
   return (

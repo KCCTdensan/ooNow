@@ -1,11 +1,11 @@
 import React from "react"
 import { css } from "@emotion/react"
 
-import UIButton from "components/atoms/UIButton"
-import Icon from "components/atoms/Icon"
-import PostList from "components/molecules/PostList"
+import UIButton from "components2/atoms/UIButton"
+import Icon from "components2/atoms/Icon"
+import PostList from "components2/molecules/PostList"
 import { date2str } from "libs/fmt"
-import User from "components/molecules/User"
+import User from "components2/molecules/User"
 
 // MyProfile写して
 const Profile = () => {

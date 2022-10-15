@@ -1,7 +1,7 @@
 import { FC, forwardRef } from "react"
 
-import Icon from "components/atoms/Icon"
-import Link from "components/atoms/Link"
+import Icon from "components2/atoms/Icon"
+import Link from "components2/atoms/Link"
 
 type IconLinkProps = {
   iconUrl: string

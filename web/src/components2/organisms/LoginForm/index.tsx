@@ -2,7 +2,7 @@ import { FC } from "react"
 import { css } from "@emotion/react"
 import { useForm, SubmitHandler } from "react-hook-form"
 
-import BrandTitle from "components/molecules/BrandTitle"
+import BrandTitle from "components2/molecules/BrandTitle"
 
 export type LoginFormInputs = {
   username: string

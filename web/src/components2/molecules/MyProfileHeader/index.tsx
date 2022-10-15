@@ -1,9 +1,9 @@
 import { FC } from "react"
 import { css, useTheme } from "@emotion/react"
 
-import Icon from "components/atoms/Icon"
-import UIButton from "components/atoms/UIButton"
-import ButtonLink from "components/molecules/ButtonLink"
+import Icon from "components2/atoms/Icon"
+import UIButton from "components2/atoms/UIButton"
+import ButtonLink from "components2/molecules/ButtonLink"
 
 type User = {
   screen: string

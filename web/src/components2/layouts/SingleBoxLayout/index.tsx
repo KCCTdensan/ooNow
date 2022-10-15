@@ -1,7 +1,7 @@
 import { FC, ReactNode } from "react"
 
-import SingleBoxFrame from "components/layouts/SingleBoxFrame"
-import Footer from "components/organisms/Footer"
+import SingleBoxFrame from "components2/layouts/SingleBoxFrame"
+import Footer from "components2/organisms/Footer"
 
 type SingleBoxLayoutProps = {
   children: ReactNode

@@ -3,6 +3,7 @@ import { useRecoilState } from "recoil"
 
 import { PostLayout, userProfileState } from "@kcctdensan/oonow-libs/next"
 import PostForm from "components/organisms/PostForm"
+import Header from 
 
 const Register: FC = () => {
   const [postContent, setPostContent] = useRecoilState(userProfileState)

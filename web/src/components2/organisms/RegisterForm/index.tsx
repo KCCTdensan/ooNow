@@ -1,8 +1,8 @@
 import { FC } from "react"
 import { css } from "@emotion/react"
 
-import RegisterFormHead from "components/molecules/RegisterFormHead"
-import RegisterFormBody from "components/molecules/RegisterFormBody"
+import RegisterFormHead from "components2/molecules/RegisterFormHead"
+import RegisterFormBody from "components2/molecules/RegisterFormBody"
 
 export type RegisterFormInputs = {
   username: string

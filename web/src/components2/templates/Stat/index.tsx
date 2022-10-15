@@ -1,7 +1,7 @@
 import React from "react"
 import { css } from "@emotion/react"
-import NowShow from "components/molecules/NowShow"
-import CommonLayout from "components/layouts/CommonLayout"
+import NowShow from "components2/molecules/NowShow"
+import CommonLayout from "components2/layouts/CommonLayout"
 
 const Stat = () => {
   return (

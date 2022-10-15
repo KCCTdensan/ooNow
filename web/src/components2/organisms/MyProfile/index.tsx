@@ -1,8 +1,8 @@
 import { FC } from "react"
 import { css } from "@emotion/react"
 
-import MyProfileHeader from "components/molecules/MyProfileHeader"
-import PostList from "components/molecules/PostList"
+import MyProfileHeader from "components2/molecules/MyProfileHeader"
+import PostList from "components2/molecules/PostList"
 
 const MyProfile: FC = () => {
   // get posts

@@ -20,15 +20,11 @@ const UIButton: FC<UIButtonProps> = ({ text, handler, active, submit }) => {
       padding: 0.4rem 1.2rem;
       background: ${active ? theme.bgDim : theme.fgDim};
       color: ${active ? theme.fgDim : theme.fg};
-      border: ${theme.border.totemohosoi} solid ${
-        active ? theme.bgDim : theme.fgDim
-      };
-      border-radius: ${theme.round.normal};
+
       font-weight: 500;
       cursor: pointer;
       &:hover {
         background: #ffb35c;
-        border: ${theme.border.totemohosoi} solid #ff9924;
         transition: all 0.4s ease;
       };
       `}

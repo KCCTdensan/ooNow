@@ -1,7 +1,7 @@
 import { FC } from "react"
 import { css } from "@emotion/react"
 
-import Logo from "components/atoms/Logo"
+import Logo from "components2/atoms/Logo"
 
 type BrandTitleProps = {
   text: string

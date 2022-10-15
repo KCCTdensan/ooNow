@@ -18,23 +18,23 @@ const Link: FC<LinkProps> = ({ to, children, noa }) => {
     }
   `
 
-  if (__BTARGET__ === "dom") {
-    return (
-      <a href={to} css={style}>
-        {children}
-      </a>
-    )
-  }
-  if (__BTARGET__ === "next") {
-    return (
-      <NextLink href={to} passHref>
-        {noa ? children : <a css={style}>{children}</a>}
-      </NextLink>
-    )
-  }
-  if (__BTARGET__ === "native") {
-    return <>{children}</>
-  }
+  // if (__BTARGET__ === "dom") {
+  //   return (
+  //     <a href={to} css={style}>
+  //       {children}
+  //     </a>
+  //   )
+  // }
+  // if (__BTARGET__ === "next") {
+  //   return (
+  //     <NextLink href={to} passHref>
+  //       {noa ? children : <a css={style}>{children}</a>}
+  //     </NextLink>
+  //   )
+  // }
+  // if (__BTARGET__ === "native") {
+  //   return <>{children}</>
+  // }
 }
 
 export default Link

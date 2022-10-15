@@ -1,6 +1,6 @@
 import React from "react"
 import { css } from "@emotion/react"
-import UIButton from "components/atoms/UIButton"
+import UIButton from "components2/atoms/UIButton"
 
 const CompanyForm = () => {
   return (

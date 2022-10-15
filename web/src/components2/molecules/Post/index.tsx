@@ -1,11 +1,11 @@
 import { FC } from "react"
 import { css, useTheme } from "@emotion/react"
 
-import { date2str } from "libs/fmt"
+import { date2str } from "libs2/fmt"
 
 // import type { User } from ""
-import User from "components/molecules/User"
-import ReactButton from "components/atoms/ReactButton"
+import User from "components2/molecules/User"
+import ReactButton from "components2/atoms/ReactButton"
 
 type Post = {
   user: User
