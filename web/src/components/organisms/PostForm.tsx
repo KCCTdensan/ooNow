@@ -95,8 +95,10 @@ const PostForm: FC<PostFormProps> = ({
           css={css`
             justify-content: center;
             display: flex;
-            margin-bottom: 20px
+            margin-top: 5rem;
+            margin-bottom: 3rem;
           `}>
+
           <NowButton text='遊び' handler={setValue("category", "play")} />
           <NowButton text='食事' handler={setValue("category", "dish")} />
           <NowButton text='睡眠' handler={setValue("category", "sleep")} />
@@ -122,6 +124,12 @@ const PostForm: FC<PostFormProps> = ({
             justify-content: center;
             margin-bottom: 50px;
           `}>
+          <ButtonLink text='キャンセル' to='/' strong={false} />
+          <div
+          css={css`
+            margin-left: 40px;
+          `}
+        />
           <UIButton text='なう' strong submit />
           {errors.submit && <FormError msg={errors.submit.message} />}
         </div>
