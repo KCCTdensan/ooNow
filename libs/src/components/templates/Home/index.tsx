@@ -21,7 +21,6 @@ const Home: React.FC = () => {
               margin-right: auto;
               position: relative;
               padding: 0.5em 1.5em;
-              border-top: solid 2px black;
               border-bottom: solid 2px black;
               &:before,
               &:after {
