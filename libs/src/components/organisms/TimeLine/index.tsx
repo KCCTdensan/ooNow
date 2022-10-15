@@ -28,6 +28,7 @@ const MyProfile: FC = () => {
     { user, time: new Date(), content: "fugafuga" },
     { user, time: new Date(), content: "piyopiyo" },
   ]
+    
 
   return (
     <>
