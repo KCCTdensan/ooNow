@@ -7,7 +7,7 @@ const MyProfile: FC = () => {
   // get posts
   const user = {
     screen: "huhyuuuuu",
-    nick: "俺",
+    nick: "俺かも",
     iconUrl: "https://www.dyama.net/icon.png",
     isPublic: false,
     created: new Date(Date.now() - 1000),
