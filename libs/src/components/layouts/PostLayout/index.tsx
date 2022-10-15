@@ -1,6 +1,6 @@
 import { FC, ReactNode } from "react"
 import { css, useTheme } from "@emotion/react"
-import Home from "components/templates/home"
+import Home from "components/templates/Home"
 
 type PostLayoutProps = {
   children: ReactNode
