@@ -1,7 +1,7 @@
 import { FC } from "react"
 import { css } from "@emotion/react"
 
-import PostList from "components/molecules/PostList"
+import { PostList } from "@kcctdensan/oonow-libs/next"
 
 const MyProfile: FC = () => {
   // get posts

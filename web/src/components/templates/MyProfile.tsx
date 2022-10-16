@@ -1,5 +1,6 @@
 import { FC } from "react"
 import { useRecoilValue } from "recoil"
+import TimeLine from "components/organisms/TimeLine"
 
 import {
   Profile,
@@ -14,6 +15,7 @@ const MyProfile: FC = () => {
   return (
     <CommonLayout>
       <Profile user={userProfile} />
+      <TimeLine />
     </CommonLayout>
   )
 }

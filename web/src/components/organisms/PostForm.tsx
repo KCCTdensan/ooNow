@@ -50,10 +50,11 @@ const PostForm: FC<PostFormProps> = ({
 
     const data = {
       content: content,
+      category: category || ["all"],
       date: new Date(),
-      public: Boolean,
+      public: true,
+      author: { connect: { id: user?.id } },
       authorId: user?.id,
-      category: category,
     }
 
     console.log(data)
